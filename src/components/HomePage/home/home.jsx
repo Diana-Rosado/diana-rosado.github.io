@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core";
 // import education from "./education.svg";
 import bird from "./bird.svg";
+import vector1 from "./Vector 1.svg";
 
 import homeStyleSheet from "./homeStyles.js";
 
@@ -25,6 +26,9 @@ function Home() {
             <img src={bird} alt={""}></img>
           </div>
         </div>
+      </div>
+      <div className={classes.vector1}>
+        <img src={vector1} alt={""}></img>
       </div>
     </div>
   );

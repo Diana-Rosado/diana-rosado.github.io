@@ -55,6 +55,12 @@ const homeStyleSheet = {
       display: "none",
     },
   },
+  vector1: {
+    marginTop: "-145px",
+    "& img": {
+      width: "100%",
+    },
+  },
 };
 
 export default homeStyleSheet;
