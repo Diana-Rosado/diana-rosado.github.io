@@ -1,4 +1,13 @@
 const contactStyleSheet = {
+  
+  vector2: {
+    marginTop: "-390px",
+    "& img": {
+      width: "100%",
+      position: 'absolute',
+      zIndex: '-1'
+    },
+  },
   contactus: {
     borderRadius: "5px",
     backgroundColor: "#f2f2f2",
@@ -15,7 +24,9 @@ const contactStyleSheet = {
       margin: "6px 1px 16px 30px",
       resize: "none",
       fontFamily: "Sans-Serif",
+      outline: 'none',
     },
+
     "& input[type=submit]": {
       backgroundColor: "#653CBE",
       color: "white",
@@ -48,12 +59,6 @@ const contactStyleSheet = {
   },
   tab: {
     margin: "0px 0px 30px 30px ",
-  },
-  vector2: {
-    marginTop: "-390px",
-    "& img": {
-      width: "100%",
-    },
   },
 };
 export default contactStyleSheet;
