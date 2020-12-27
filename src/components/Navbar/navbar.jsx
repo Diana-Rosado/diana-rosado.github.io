@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
 import navbarStyleSheet from "./navbarStyles.js";
-import phoenix from "./coloredphoenix.svg";
+// import phoenix from "./coloredphoenix.svg";
 
 const useStyles = makeStyles(navbarStyleSheet);
 
@@ -28,14 +28,14 @@ function Navbar() {
           <a href="#donate">Donate</a>
         </li>
       </ul>
-      <a
+      {/* <a
         href="javascript:void(0);"
         onClick="myFunction()"
         className={classes.bar}
       >
         {" "}
         <img src={phoenix} alt={""}></img>
-      </a>
+      </a> */}
     </div>
   );
 }

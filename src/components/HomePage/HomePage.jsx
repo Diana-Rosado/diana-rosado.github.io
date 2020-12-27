@@ -6,24 +6,22 @@ import Mission from "./mission/mission.jsx";
 import HowItWorks from "./howitworks/howitworks.jsx";
 import Contact from "./contact/contact.jsx";
 
-
-// import homePageStyleSheet from './homePageStyles.js';
+// import homePageStyleSheet from "./homePageStyles.js";
 
 // const useStyles = makeStyles(homePageStyleSheet);
 
 function HomePage() {
-    // const classes = useStyles();
-    
-    return(
-        <div>     
-            <Navbar />
-            <Home />
-            <Mission />
-            <HowItWorks />
-            <Contact />
+  //   const classes = useStyles();
 
-        </div>
-    );
+  return (
+    <div>
+      <Navbar />
+      <Home />
+      <Mission />
+      <HowItWorks />
+      <Contact />
+    </div>
+  );
 }
 
 export default HomePage;

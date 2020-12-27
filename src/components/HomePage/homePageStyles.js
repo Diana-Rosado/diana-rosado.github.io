@@ -1,4 +1,13 @@
 // const homePageStyleSheet = {
+//   curve: {
+// position: "absolute",
+// width: "1639px",
+// height: "403px",
+// left: "-144px",
+// top: "486px",
+// background: "#5f3bba",
+// backgroundColor: "blue",
+//   },
 //     home: {
 //         height: "568px",
 //         // backgroundColor: '#333399',
@@ -49,7 +58,6 @@
 //             },
 //         },
 //     },
-
 // };
 
 // export default homePageStyleSheet;

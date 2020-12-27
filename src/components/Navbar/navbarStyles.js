@@ -34,11 +34,11 @@ const navbarStyleSheet = {
     marginTop: "10px",
   },
 
-  "@media (min-width: 1125px)": {
-    bar: {
-      display: "none",
-    },
-  },
+  // "@media (min-width: 1125px)": {
+  //   bar: {
+  //     display: "none",
+  //   },
+  // },
   "@media (max-width: 1125px)": {
     topics: {
       display: "none",
