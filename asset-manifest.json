@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/imagicationedu.com/static/css/main.bb893e01.chunk.css",
+    "main.js": "/imagicationedu.com/static/js/main.5c956324.chunk.js",
+    "main.js.map": "/imagicationedu.com/static/js/main.5c956324.chunk.js.map",
+    "runtime-main.js": "/imagicationedu.com/static/js/runtime-main.cede9781.js",
+    "runtime-main.js.map": "/imagicationedu.com/static/js/runtime-main.cede9781.js.map",
+    "static/js/2.baa34e4f.chunk.js": "/imagicationedu.com/static/js/2.baa34e4f.chunk.js",
+    "static/js/2.baa34e4f.chunk.js.map": "/imagicationedu.com/static/js/2.baa34e4f.chunk.js.map",
+    "static/js/3.8af3031f.chunk.js": "/imagicationedu.com/static/js/3.8af3031f.chunk.js",
+    "static/js/3.8af3031f.chunk.js.map": "/imagicationedu.com/static/js/3.8af3031f.chunk.js.map",
+    "index.html": "/imagicationedu.com/index.html",
+    "static/css/main.bb893e01.chunk.css.map": "/imagicationedu.com/static/css/main.bb893e01.chunk.css.map",
+    "static/js/2.baa34e4f.chunk.js.LICENSE.txt": "/imagicationedu.com/static/js/2.baa34e4f.chunk.js.LICENSE.txt",
+    "static/media/Vector 1.d530dafb.svg": "/imagicationedu.com/static/media/Vector 1.d530dafb.svg",
+    "static/media/Vector 2.4f8e3d3d.svg": "/imagicationedu.com/static/media/Vector 2.4f8e3d3d.svg",
+    "static/media/bird.95c75568.svg": "/imagicationedu.com/static/media/bird.95c75568.svg",
+    "static/media/book.136472ab.svg": "/imagicationedu.com/static/media/book.136472ab.svg",
+    "static/media/magnify.3f23acbb.svg": "/imagicationedu.com/static/media/magnify.3f23acbb.svg",
+    "static/media/phoenix_white.c1e6ecdf.png": "/imagicationedu.com/static/media/phoenix_white.c1e6ecdf.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cede9781.js",
+    "static/js/2.baa34e4f.chunk.js",
+    "static/css/main.bb893e01.chunk.css",
+    "static/js/main.5c956324.chunk.js"
+  ]
+}
