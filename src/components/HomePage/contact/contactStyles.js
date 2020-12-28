@@ -21,7 +21,9 @@ const contactStyleSheet = {
     },
     "& textarea": {
       paddingBottom: "50px",
+      outline: "none",
     },
+
     "& input[type=submit]": {
       backgroundColor: "#653CBE",
       color: "white",
