@@ -65,6 +65,8 @@ const contactStyleSheet = {
     marginTop: "-18%",
     "& img": {
       width: "100%",
+      position: 'absolute',
+      zIndex: '-1',
     },
   },
 };
