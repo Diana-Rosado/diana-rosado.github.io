@@ -4,12 +4,21 @@ const navbarStyleSheet = {
     display: "flex",
     justifyContent: "space-between",
     paddingTop: "27px",
+    
 
     "& ul": {
       flex: 1,
       maxWidth: "50%",
       display: "flex",
       justifyContent: "space-evenly",
+
+      '@media (max-width:1300px)' : {
+        maxWidth: '60%',
+    },
+
+    '@media (max-width:700px)' : {
+      maxWidth: '70%',
+  },
       "& li": {
         display: "inline",
         margin: 0,

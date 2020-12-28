@@ -12,7 +12,7 @@ function Contact() {
   return (
     <div>
     <div className = {classes.title}>
-    <p>Interested to learn more?</p>
+    <p id="contact">Interested to learn more?</p>
     </div>
     <div className = {classes.contactus}>
         <div className ={classes.tab}>

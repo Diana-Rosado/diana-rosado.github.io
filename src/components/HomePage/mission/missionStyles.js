@@ -1,10 +1,11 @@
 const missionStyleSheet = {
     mission: {
-        height: '300px',
+        paddingTop: '200px',
+        height: '250px',
         color: '#333399',
         textAlign: 'center',
         "& h1": {
-            paddingTop: '100px',
+            paddingTop: '50px',
             fontSize: '30px',
 
             '@media (max-width:1300px)' : {
