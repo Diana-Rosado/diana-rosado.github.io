@@ -13,18 +13,18 @@ function HowItWorks() {
   return (
     <div className={classes.mission}>
       <h1 id="about">How it Works</h1>
-      <figure className={classes.howitworks}>
+      <figure>
         <img src={phoenix_white} alt={"white phoenix"}></img>
         <p>
           Meet Serena, our assistant who will get to know you on a personal
           level
         </p>
       </figure>
-      <figure className={classes.howitworks}>
+      <figure>
         <img src={magnify} alt={""}></img>
         <p>We will search high and low for the right opportunities.</p>
       </figure>
-      <figure className={classes.howitworks}>
+      <figure>
         <img src={book} alt={""}></img>
         <p>
           You will then gain access to resources that are most relevant to you.

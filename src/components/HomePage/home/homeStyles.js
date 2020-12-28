@@ -86,7 +86,6 @@ const homeStyleSheet = {
     },
   },
   vector1: {
-    // marginTop: "-145px",
     marginTop: "-11.5%",
     "& img": {
       width: "100%",
