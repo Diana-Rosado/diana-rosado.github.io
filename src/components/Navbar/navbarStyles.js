@@ -11,7 +11,7 @@ const navbarStyleSheet = {
       maxWidth: "50%",
       display: "flex",
       justifyContent: "space-evenly",
-
+      
       '@media (max-width:1300px)' : {
         maxWidth: '60%',
     },
@@ -19,17 +19,21 @@ const navbarStyleSheet = {
     '@media (max-width:700px)' : {
       maxWidth: '70%',
   },
+
       "& li": {
         display: "inline",
         margin: 0,
         padding: 0,
+
       },
     },
     "& a": {
       color: "white",
       textDecoration: "none",
       fontWeight: "bold",
+
     },
+
     "& img": {
       height: "50px",
       width: "150px",
@@ -48,11 +52,20 @@ const navbarStyleSheet = {
   //     display: "none",
   //   },
   // },
-  "@media (max-width: 1125px)": {
-    topics: {
-      display: "none",
+  topics: {
+    "& a": {
+      '@media (max-width:650px)' : {
+        display: 'none',
+    },
     },
   },
+  bar: {
+    "& img": {
+    },
+    '@media (min-width:650px)' : {
+      display: 'none',
+  },
+  }
 };
 
 export default navbarStyleSheet;
