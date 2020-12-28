@@ -3,7 +3,9 @@ const contactStyleSheet = {
     borderRadius: "5px",
     backgroundColor: "#E6E8EC",
     padding: "20px",
-    width: "400px",
+    width: "32%",
+    maxWidth: "400px",
+    minWidth: "390px",
     margin: "0 auto",
 
     "& input, textarea": {
@@ -60,7 +62,7 @@ const contactStyleSheet = {
     margin: "0px 0px 30px 30px ",
   },
   vector2: {
-    marginTop: "-230px",
+    marginTop: "-18%",
     "& img": {
       width: "100%",
     },

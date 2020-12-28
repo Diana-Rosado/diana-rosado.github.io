@@ -45,7 +45,6 @@ const homeStyleSheet = {
       "& img": {
         height: "320px",
         width: "420px",
-        // paddingRight: "50px",
         marginTop: "40px",
       },
     },
@@ -56,7 +55,8 @@ const homeStyleSheet = {
     },
   },
   vector1: {
-    marginTop: "-145px",
+    // marginTop: "-145px",
+    marginTop: "-11.5%",
     "& img": {
       width: "100%",
     },
