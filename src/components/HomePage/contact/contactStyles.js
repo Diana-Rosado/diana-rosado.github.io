@@ -1,11 +1,10 @@
 const contactStyleSheet = {
   contactus: {
     borderRadius: "5px",
-    backgroundColor: "#f2f2f2",
+    backgroundColor: "#E6E8EC",
     padding: "20px",
-    width: "30%",
+    width: "400px",
     margin: "0 auto",
-    marginBottom: "150px",
 
     "& input, textarea": {
       width: "80%" /* Full width */,
@@ -15,15 +14,24 @@ const contactStyleSheet = {
       margin: "6px 1px 16px 30px",
       resize: "none",
       fontFamily: "Sans-Serif",
+      boxShadow: "0px 3px rgb(0,0,0,0.25)",
+      "&::placeholder": {
+        color: "#BFBFBF",
+      },
+    },
+    "& textarea": {
+      paddingBottom: "50px",
     },
     "& input[type=submit]": {
       backgroundColor: "#653CBE",
       color: "white",
-      padding: "12px 20px",
+      padding: "20px 20px",
       border: "none",
       borderRadius: "4px",
       cursor: "pointer",
       marginLeft: "10%",
+      boxShadow: "none",
+      width: "80%" /* Full width */,
     },
     "& input[type=submit]:hover": {
       backgroundColor: "#5A39AE",
@@ -50,7 +58,7 @@ const contactStyleSheet = {
     margin: "0px 0px 30px 30px ",
   },
   vector2: {
-    marginTop: "-390px",
+    marginTop: "-230px",
     "& img": {
       width: "100%",
     },
