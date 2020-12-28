@@ -5,6 +5,16 @@ import hamburger from "./hamburger.svg";
 
 const useStyles = makeStyles(navbarStyleSheet);
 
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+
 function Navbar() {
   const classes = useStyles();
 
@@ -16,27 +26,32 @@ function Navbar() {
       
       <ul className={classes.topics}>
         <li>
-          <a href="#mission">Our Mission</a>
+          <a className= {classes.link}href="#mission">Our Mission</a>
         </li>
         <li>
-          <a href="#about">What we do</a>
+          <a className= {classes.link} href="#about">What we do</a>
         </li>
         <li>
-          <a href="#contact">Contact Us</a>
+          <a className= {classes.link} href="#contact">Contact Us</a>
         </li>
         <li>
-          <a href="#donate">Donate</a>
+          <a className= {classes.link} href="#donate">Donate</a>
         </li>
-      </ul>
-      <a
-        href="javascript:void(0);"
-        onClick="myFunction()"
-        className={classes.bar}
-      >
-        {" "}
-        <img src={hamburger} alt={""}></img>
-      </a>
 
+
+        
+        <div className = {classes.dropnavbar}>
+        <button className = {classes.bar}>
+        <img src={hamburger} alt={""}></img>
+        </button>
+        <div className = {classes.dropdownContent}>
+          <a>Mission</a>
+          <a>How it works</a>
+          <a>Contact Us</a>
+          <a>Donate</a>
+          </div>
+        </div>
+      </ul>
     </div>
   );
 }
