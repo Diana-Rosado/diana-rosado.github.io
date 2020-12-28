@@ -16,7 +16,7 @@ const contactStyleSheet = {
       margin: "6px 1px 16px 30px",
       resize: "none",
       fontFamily: "Sans-Serif",
-      boxShadow: "0px 3px rgb(0,0,0,0.25)",
+      boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
       "&::placeholder": {
         color: "#BFBFBF",
       },
