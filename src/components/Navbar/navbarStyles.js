@@ -52,20 +52,42 @@ const navbarStyleSheet = {
   //     display: "none",
   //   },
   // },
-  topics: {
-    "& a": {
+  link: {
       '@media (max-width:650px)' : {
         display: 'none',
-    },
+        position: 'relative',
     },
   },
   bar: {
+    backgroundColor: 'rgba(255, 0, 0, 0)',
+    border: 'none',
+    outline :'none',
     "& img": {
+      width: "25px",
+      height: "25px",
+      marginTop: '-10px',
+      paddingRight: "20px",
     },
-    '@media (min-width:650px)' : {
-      display: 'none',
+
+    "@media (min-width:650px)": {
+      display: "none",
+    },
   },
-  }
+  dropdownContent: {
+    display: 'none',
+    position: 'relative', // changed
+    minWidth: '160px',
+    boxShadow: '0px 8px 16px 0px rgba(0,0,0,0.2)',
+    zIndex: '1',
+
+    "& a": {
+      float: 'none',
+      display: 'block',
+      padding: '12px 16px',
+      textDecoration: 'none',
+    },
+  },
+
 };
 
 export default navbarStyleSheet;
