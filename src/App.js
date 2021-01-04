@@ -3,7 +3,8 @@ import {Route, BrowserRouter as Router, Switch} from "react-router-dom";
 import Form from './components/Serena/Form.jsx';
 import Interests from './components/Serena/Interests.jsx';
 
-function App () {
+function App() {
+  // const App = () => {
   return (
     <div>
     <Router>
@@ -16,7 +17,5 @@ function App () {
     </div>
   );
 }
-
-
 
 export default App;
