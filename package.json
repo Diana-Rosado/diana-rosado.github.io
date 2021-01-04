@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^12.6.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"
   },
@@ -38,8 +39,10 @@
       "last 1 safari version"
     ]
   },
-"homepage": "https://diana-rosado.github.io",
+  "homepage": "https://diana-rosado.github.io",
   "devDependencies": {
-    "gh-pages": "^3.1.0"
+    "css-loader": "^5.0.1",
+    "gh-pages": "^3.1.0",
+    "style-loader": "^2.0.0"
   }
 }

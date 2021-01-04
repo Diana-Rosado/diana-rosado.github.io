@@ -13,7 +13,7 @@ const homeStyleSheet = {
       width: "60%",
     },
     "& h1": {
-      fontSize: "76px",
+      fontSize: "73px",
       marginBottom: "0px",
 
       "@media (max-width:1300px)": {
@@ -25,7 +25,7 @@ const homeStyleSheet = {
       },
     },
     "& p": {
-      fontSize: "35px",
+      fontSize: "34px",
       paddingRight: "40px",
       marginTop: "0px",
 
@@ -40,29 +40,7 @@ const homeStyleSheet = {
         margin: "0 auto",
       },
     },
-    "& button": {
-      backgroundColor: "#4928A5",
-      border: "none",
-      borderRadius: "50px",
-      outline: "none",
-      height: "60px",
-      width: "230px",
-      color: "white",
-      fontSize: "25px",
-      fontWeight: "bold",
 
-      "&:hover": {
-        backgroundColor: "#333399",
-      },
-
-      "@media (max-width:1300px)": {
-        height: "50px",
-        width: "220px",
-        fontSize: "20px",
-        borderRadius: "40px",
-        marginTop: "20px",
-      },
-    },
   },
   homeImage: {
     flex: "1",
@@ -91,6 +69,30 @@ const homeStyleSheet = {
       width: "100%",
       position: "absolute",
       zIndex: "1",
+    },
+  },
+  buttonStyle: {
+    backgroundColor: "#4928A5",
+    border: "none",
+    borderRadius: "50px",
+    outline: "none",
+    height: "60px",
+    width: "230px",
+    color: "white",
+    fontSize: "20px",
+    fontWeight: "bold",
+    marginTop: "-20px",
+
+    "&:hover": {
+      backgroundColor: "#333399",
+    },
+
+    "@media (max-width:1300px)": {
+      height: "50px",
+      width: "220px",
+      fontSize: "20px",
+      borderRadius: "40px",
+      marginTop: "20px",
     },
   },
 };

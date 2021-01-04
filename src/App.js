@@ -1,11 +1,20 @@
 import HomePage from './components/HomePage/HomePage.jsx';
+import {Route, BrowserRouter as Router, Switch} from "react-router-dom";
+import Serena from './components/Serena/Form.jsx';
 
-const App = () => {
+function App () {
   return (
     <div>
-      <HomePage />
+    <Router>
+      <Switch>
+        <Route path = "/" exact component = {HomePage}/>
+        <Route path="/Serena" component = {Serena}/>
+      </Switch>
+      </Router>
     </div>
   );
 }
+
+
 
 export default App;
