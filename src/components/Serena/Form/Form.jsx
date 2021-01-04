@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { makeStyles } from "@material-ui/core";
 import formStyles from "./formStyles.js";
 import {Link} from "react-router-dom";
-import bird from "../HomePage/home/bird.svg";
+import bird from "./bird.svg";
 import {Button} from '@material-ui/core';
 
  const useStyles = makeStyles(formStyles);
