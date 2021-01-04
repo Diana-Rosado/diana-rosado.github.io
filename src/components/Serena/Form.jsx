@@ -15,9 +15,9 @@ function Form() {
 
     const NextPage = () =>  (
         <div className = {classes.nextCtn}>
-            <button className = {classes.nextBtn}>
+            <Button component ={Link} to = "/Interests" exact className = {classes.nextBtn}>
             Next
-            </button>
+            </Button>
         </div>
     )
     return (

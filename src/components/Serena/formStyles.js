@@ -11,6 +11,8 @@ const formStyles = {
         width: '15vh',
         position: 'absolute',
         left: '15%',
+        
+
     },
     link: {
         backgroundImage: "linear-gradient(to right, #663CC0, #663CBF, #333399)",
@@ -24,12 +26,11 @@ const formStyles = {
         textTransform: 'capitalize'
     },
     greet : {
-        fontSize: '38px',
+        fontSize: '2.5vw',
         marginLeft: '10%',
         color: 'white',
         fontWeight: 'bold',
         fontFamily: 'sans-serif',
-        
         
     },
     container : {
@@ -95,7 +96,7 @@ const formStyles = {
     },
     
     btn: {
-        fontSize: '25px',
+        fontSize: '1.5vw',
         backgroundColor: '#BC98EE',
         borderRadius: '5px',
         height: '5em',
@@ -116,7 +117,8 @@ const formStyles = {
         border: 'none',
         borderRadius: '5px',
         color: 'white',
-        fontSize: '20px',
+        fontSize: '1.3vw',
+        fontWeight: 'bold',
 
         "&:hover": {
             cursor: 'pointer',
@@ -126,10 +128,9 @@ const formStyles = {
 
     },
     nextCtn: {
-        position: 'absolute',
+        position: 'fixed',
         right: '17%',
         bottom: '13%',
-        fontWeight: 'bold',
 
     },
 };

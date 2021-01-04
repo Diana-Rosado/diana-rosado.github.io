@@ -1,6 +1,7 @@
 import HomePage from './components/HomePage/HomePage.jsx';
 import {Route, BrowserRouter as Router, Switch} from "react-router-dom";
-import Serena from './components/Serena/Form.jsx';
+import Form from './components/Serena/Form.jsx';
+import Interests from './components/Serena/Interests.jsx';
 
 function App () {
   return (
@@ -8,7 +9,8 @@ function App () {
     <Router>
       <Switch>
         <Route path = "/" exact component = {HomePage}/>
-        <Route path="/Serena" component = {Serena}/>
+        <Route path="/Form" component = {Form}/>
+        <Route path= "/Interests" component = {Interests}/>
       </Switch>
       </Router>
     </div>
