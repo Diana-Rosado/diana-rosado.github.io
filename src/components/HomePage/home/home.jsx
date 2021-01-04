@@ -2,14 +2,13 @@ import React from "react";
 import { makeStyles } from "@material-ui/core";
 import bird from "./bird.svg";
 import vector1 from "./Vector 1.svg";
-import {Link} from "react-router-dom";
-import {Button} from '@material-ui/core';
+import { Link } from "react-router-dom";
+import { Button } from "@material-ui/core";
 import homeStyleSheet from "./homeStyles.js";
 
 const useStyles = makeStyles(homeStyleSheet);
 
 function Home() {
-
   const classes = useStyles();
 
   return (
@@ -19,7 +18,13 @@ function Home() {
           <div>
             <h1>Imagication</h1>
             <p>Enhancing your educational journey.</p>
-            <Button className = {classes.buttonStyle} component={Link} to ="/Serena" >Get Started Now</Button>
+            <Button
+              className={classes.buttonStyle}
+              component={Link}
+              to="/Serena"
+            >
+              Get Started Now
+            </Button>
           </div>
         </div>
         <div className={classes.homeImage}>
