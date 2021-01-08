@@ -18,7 +18,7 @@ function Home() {
           <div>
             <h1>Imagication</h1>
             <p>Enhancing your educational journey.</p>
-            <Button className = {classes.buttonStyle} component={Link} to ="/Form" >Get Started Now</Button>
+            <Button className = {classes.buttonStyle} component={Link} to ="/form" >Get Started Now</Button>
           </div>
         </div>
         <div className={classes.homeImage}>

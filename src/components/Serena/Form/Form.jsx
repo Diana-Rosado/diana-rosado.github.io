@@ -15,7 +15,7 @@ function Form() {
 
     const NextPage = () =>  (
         <div className = {classes.nextCtn}>
-            <Button component ={Link} to = "/Interests" exact className = {classes.nextBtn}>
+            <Button component ={Link} to = "/interests" exact className = {classes.nextBtn}>
             Next
             </Button>
         </div>
@@ -41,7 +41,7 @@ function Form() {
                             <input type = "radio" name = "options" id = "option2" onClick={onClick}/> <span>10th grade</span>
                         </label>
                         <label className = {classes.btn}>
-                            <input type = "radio" name = "options" id = "option3"onClick={onClick}/> <span>11th grade</span>
+                            <input type = "radio" name = "options" id = "option3" onClick={onClick}/> <span>11th grade</span>
                         </label>
                         <label className = {classes.btn}>
                             <input type = "radio" name = "options" id = "option4" onClick={onClick}/> <span>12th grade</span>
