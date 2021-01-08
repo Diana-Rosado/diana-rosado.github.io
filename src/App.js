@@ -5,7 +5,6 @@ import Interests from './components/Serena/Interests/Interests.jsx';
 import Resources from './components/Serena/ResourcePage/Resource.jsx'
 
 function App() {
-  // const App = () => {
   return (
     <div>
     <Router>
