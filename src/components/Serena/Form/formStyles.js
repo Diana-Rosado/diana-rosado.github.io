@@ -7,12 +7,11 @@ const formStyles = {
         
     },
     img: {
-        height: "15vh",
-        width: '15vh',
+        height: "8vw",
+        width: '8vw',
         position: 'absolute',
         left: '15%',
         
-
     },
     link: {
         backgroundImage: "linear-gradient(to right, #663CC0, #663CBF, #333399)",
@@ -50,7 +49,7 @@ const formStyles = {
         "& p": {
             display: 'flex',
             justifyContent: 'center',
-            fontSize: '30px',
+            fontSize: '2vw',
             position: 'relative',
             top:'10%',
             fontWeight: 'bold',
@@ -128,10 +127,14 @@ const formStyles = {
 
     },
     nextCtn: {
-        position: 'fixed',
-        right: '17%',
-        bottom: '13%',
+        position: 'absolute',
+        right: '18%',
+        bottom: '15%',
 
+        "@media (max-width:1200px)": {
+            bottom: '25%'
+            
+          },
     },
 };
 

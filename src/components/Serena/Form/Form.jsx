@@ -24,7 +24,7 @@ function Form() {
     <div className={classes.nextCtn}>
       <Button
         component={Link}
-        to="/Interests"
+        to="/interests"
         exact
         className={classes.nextBtn}
       >
