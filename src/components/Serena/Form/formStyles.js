@@ -42,8 +42,8 @@ const formStyles = {
         background: 'rgba(255 , 255, 255, 0.25)',
         margin: 'auto',
         design: 'block',
-        width: '70%',
-        height: '70%',
+        width: '70vw',
+        height: '60vh',
         borderRadius: '10px',
 
         "& p": {
@@ -110,7 +110,7 @@ const formStyles = {
 
     nextBtn: {
         height: '3em',
-        width: '7em',
+        width: '6em',
         backgroundColor: '#fe6500',
         outline: 'none',
         border: 'none',

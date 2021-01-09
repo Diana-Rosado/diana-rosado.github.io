@@ -4,8 +4,7 @@ import interestStyles from "./interestStyles.js";
 import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import bird from "../Form/bird.svg";
-import { Multiselect } from "multiselect-react-dropdown";
-import { UserContext } from "../../currentData.jsx";
+import MultiSelect from "react-multi-select-component";
 
 const useStyles = makeStyles(interestStyles);
 
@@ -32,14 +31,27 @@ function Interests() {
     },
   };
 
-  const data = [
-    { Resource: "Academic Resources", id: 1 },
-    { Resource: "Career", id: 2 },
-    { Resource: "Volunteering", id: 3 },
-    { Resource: "Scholarships", id: 4 },
+  const NextPage = () => (
+    <div className={classes.nextCtn}>
+      <Button
+        component={Link}
+        to="/resources"
+        exact
+        className={classes.nextBtn}
+      >
+        Get Started Now
+      </Button>
+    </div>
+  );
+
+  const options = [
+    { label: "Academic Resources", value: "academics" },
+    { label: "Career", value: "career" },
+    { label: "Volunteering", value: "volunteering" },
+    { label: "Scholarships", value: "scholarships" },
   ];
 
-  const [options] = useState(data);
+  const [selected, setSelected] = useState([]);
 
   const classes = useStyles();
   return (
@@ -52,21 +64,21 @@ function Interests() {
       <main className={classes.body}>
         <figure className={classes.container}>
           <img src={bird} alt={"Phoenix Logo"} className={classes.img} />
+          <p className={classes.greet}>Oh, so you're in usergrade</p>
         </figure>
         <div className={classes.ctn1}>
-          <p>What are you interested in today? {user.grade} </p>
+          <p>What are you interested in today?</p>
           <form
             className={classes.form}
             data-toggle="buttons"
             onClick={onClick}
           >
-            <Multiselect
-              className={classes.resources}
+            <MultiSelect
               options={options}
-              displayValue={"Resource"}
-              closeOnSelect={false}
-              avoidHighlightFirstOption={true}
-              style={searchBox}
+              value={selected}
+              onChange={setSelected}
+              labelledBy={"Select"}
+              shouldToggleOnHover={true}
             />
             {isVisible ? <NextPage /> : null}
           </form>
