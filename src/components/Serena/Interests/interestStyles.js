@@ -24,6 +24,15 @@ const interestStyles = {
         marginTop: "30px",
         textTransform: 'capitalize'
     },
+
+    greet : {
+        fontSize: '2.5vw',
+        marginLeft: '-3%',
+        color: 'white',
+        fontWeight: 'bold',
+        fontFamily: 'sans-serif',
+        
+    },
     container : {
         display: 'flex',
         justifyContent: 'center',
@@ -34,10 +43,9 @@ const interestStyles = {
         background: 'rgba(255 , 255, 255, 0.25)',
         margin: 'auto',
         design: 'block',
-        width: '70%',
-        height: '70%',
+        width: '55vw',
+        height: '60vh',
         borderRadius: '10px',
-        marginTop: '18vh',
 
         "& p": {
             display: 'flex',
@@ -51,24 +59,23 @@ const interestStyles = {
     },
 
     form: {
-        display: 'flex',
-        justifyContent: 'center',
-        width: '50%',
-        alignItems: 'center',
-        backgroundColor: '#BC98EE',
-        marginLeft: '25%',
+        width: '30vw',
+        margin: 'auto',
+        fontSize: '1.2vw',
+        display: 'block',
         marginTop: '10%',
     },
     nextBtn: {
         height: '3em',
-        width: '7em',
+        width: '12em',
         backgroundColor: '#fe6500',
         outline: 'none',
         border: 'none',
         borderRadius: '5px',
         color: 'white',
-        fontSize: '1.3vw',
+        fontSize: '1.4vw',
         fontWeight: 'bold',
+        whitespace:'nowrap',
 
         "&:hover": {
             cursor: 'pointer',
@@ -78,7 +85,7 @@ const interestStyles = {
     },
     nextCtn: {
         position: 'absolute',
-        right: '18%',
+        right: '26%',
         bottom: '15%',
 
         "@media (max-width:1200px)": {
@@ -88,7 +95,7 @@ const interestStyles = {
 
     backCtn: {
         position: 'absolute',
-        left: '18%',
+        left: '26%',
         bottom: '15%',
 
         "@media (max-width:1200px)": {
@@ -98,8 +105,8 @@ const interestStyles = {
 
     backBtn: {
         height: '3em',
-        width: '7em',
-        backgroundColor: '#fe6500',
+        width: '6em',
+        backgroundColor: '#aaa5a9',
         outline: 'none',
         border: 'none',
         borderRadius: '5px',
@@ -109,7 +116,7 @@ const interestStyles = {
 
         "&:hover": {
             cursor: 'pointer',
-            backgroundColor: "#ed3c00",
+            backgroundColor: "#b8b2b6",
             borderRadius: '5px',
         },
     },
