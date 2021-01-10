@@ -5,6 +5,7 @@ import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import bird from "../Form/bird.svg";
 import MultiSelect from "react-multi-select-component";
+import { UserContext } from "../../currentData.jsx";
 
 const useStyles = makeStyles(interestStyles);
 
@@ -22,24 +23,6 @@ function Interests() {
         className={classes.nextBtn}
       >
         Next
-      </Button>
-    </div>
-  );
-  const searchBox = {
-    chips: {
-      background: "#663CBF",
-    },
-  };
-
-  const NextPage = () => (
-    <div className={classes.nextCtn}>
-      <Button
-        component={Link}
-        to="/resources"
-        exact
-        className={classes.nextBtn}
-      >
-        Get Started Now
       </Button>
     </div>
   );
@@ -63,7 +46,7 @@ function Interests() {
             <figure className = {classes.container}>
                 <img src={bird} alt={"Phoenix Logo"} className = {classes.img}/>
                 <p className={classes.greet}>
-                     Oh, so you're in usergrade
+                     Oh, so you're in {user.grade}
                 </p>
                 </figure>
                 <div className = {classes.ctn1}>
@@ -86,8 +69,6 @@ function Interests() {
                 </div>
             </main>
         </div>
-      </main>
-    </div>
   );
 }
 
