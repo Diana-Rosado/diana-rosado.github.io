@@ -1,34 +1,57 @@
-import React, {useState} from 'react';
+import React, { useContext, useState } from "react";
 import { makeStyles } from "@material-ui/core";
 import interestStyles from "./interestStyles.js";
-import {Button} from '@material-ui/core';
-import {Link} from "react-router-dom";
+import { Button } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import bird from "../Form/bird.svg";
 import MultiSelect from "react-multi-select-component";
 
 const useStyles = makeStyles(interestStyles);
 
 function Interests() {
+  const user = useContext(UserContext);
+  const [isVisible, setVisibility] = useState(false);
+  const onClick = () => setVisibility(true);
 
-    const [isVisible,setVisibility] = useState(false)
-    const onClick = () => setVisibility(true)
+  const NextPage = () => (
+    <div className={classes.nextCtn}>
+      <Button
+        component={Link}
+        to="/resources"
+        exact
+        className={classes.nextBtn}
+      >
+        Next
+      </Button>
+    </div>
+  );
+  const searchBox = {
+    chips: {
+      background: "#663CBF",
+    },
+  };
 
-    const NextPage = () =>  (
-        <div className = {classes.nextCtn}>
-            <Button component ={Link} to = "/resources" exact className = {classes.nextBtn}>
-            Get Started Now
-            </Button>
-        </div>
-    )
+  const NextPage = () => (
+    <div className={classes.nextCtn}>
+      <Button
+        component={Link}
+        to="/resources"
+        exact
+        className={classes.nextBtn}
+      >
+        Get Started Now
+      </Button>
+    </div>
+  );
 
-    const options = [
-        { label: "Academic Resources", value: "academics" },
-        { label: "Career", value: "career" },
-        { label: "Volunteering", value: "volunteering" },
-        { label: "Scholarships", value: "scholarships" },
-      ];
+  const options = [
+    { label: "Academic Resources", value: "academics" },
+    { label: "Career", value: "career" },
+    { label: "Volunteering", value: "volunteering" },
+    { label: "Scholarships", value: "scholarships" },
+  ];
 
-      const [selected, setSelected] = useState([]);
+  const [selected, setSelected] = useState([]);
 
     const classes = useStyles();
     return (
@@ -63,7 +86,9 @@ function Interests() {
                 </div>
             </main>
         </div>
-    )
-};
+      </main>
+    </div>
+  );
+}
 
-export default Interests
+export default Interests;
