@@ -45,13 +45,14 @@ function Interests() {
                 </figure>
                 <div className = {classes.ctn1}>
                     <p >What are you interested in today?</p>
-                    <form className = {classes.form} data-toggle = "buttons"  onClick = {onClick}>
+                    <form className = {classes.form}   onClick = {onClick}>
                         <MultiSelect
                             options = {options}
                             value={selected}
                             onChange={setSelected}
                             labelledBy={"Select"}
                             shouldToggleOnHover ={true}
+                            className= {classes.dropdown}
                            
                         />
                         {isVisible ? <NextPage/> : null}
