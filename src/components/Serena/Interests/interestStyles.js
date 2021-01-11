@@ -60,8 +60,8 @@ const interestStyles = {
 
     form: {
         width: '30vw',
-        margin: 'auto',
-        fontSize: '1.2vw',
+        margin: '10vh auto',
+        fontSize: '0.9rem',
         display: 'block',
         marginTop: '10%',
     },
@@ -73,7 +73,7 @@ const interestStyles = {
         border: 'none',
         borderRadius: '5px',
         color: 'white',
-        fontSize: '1.4vw',
+        fontSize: '0.9vw',
         fontWeight: 'bold',
         whitespace:'nowrap',
 
@@ -82,6 +82,11 @@ const interestStyles = {
             backgroundColor: "#ed3c00",
             borderRadius: '5px',
         },
+
+        "@media (max-height:400px)": {
+            position: 'fixed',
+            right: '25vw'
+          },
     },
     nextCtn: {
         position: 'absolute',
@@ -104,8 +109,8 @@ const interestStyles = {
     },
 
     backBtn: {
-        height: '3em',
-        width: '6em',
+        height: '2em',
+        width: '5em',
         backgroundColor: '#aaa5a9',
         outline: 'none',
         border: 'none',
@@ -119,7 +124,13 @@ const interestStyles = {
             backgroundColor: "#b8b2b6",
             borderRadius: '5px',
         },
+        
+        "@media (max-height:400px)": {
+            position: 'fixed',
+            left: '25vw'
+          },
     },
+
     
 }
 

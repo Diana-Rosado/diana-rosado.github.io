@@ -59,7 +59,7 @@ const formStyles = {
 
     form: {
         display: 'grid',
-        margin: '9% auto',
+        margin: '10vh auto',
         width: '40%',
         height: '60%',
         gridTemplateColumns: 'auto auto',
@@ -69,8 +69,9 @@ const formStyles = {
         alignItems: 'center',
         justifyContent: 'center',
 
+
         "& span" : {
-            height: '5em',
+            height: '15vh',
             width: '11em',
             display: 'flex',
             alignItems: 'center',
@@ -98,7 +99,7 @@ const formStyles = {
         fontSize: '1.5vw',
         backgroundColor: '#BC98EE',
         borderRadius: '5px',
-        height: '5em',
+        height: '15vh',
         width: '11em',
         display: 'flex',
         alignItems: 'center',
@@ -109,8 +110,8 @@ const formStyles = {
     },
 
     nextBtn: {
-        height: '3em',
-        width: '6em',
+        height: '2em',
+        width: '5em',
         backgroundColor: '#fe6500',
         outline: 'none',
         border: 'none',
@@ -124,6 +125,12 @@ const formStyles = {
             backgroundColor: "#ed3c00",
             borderRadius: '5px',
         },
+
+        "@media (max-height:400px)": {
+            position: 'fixed',
+            right: '15vw'
+            
+          },
 
     },
     nextCtn: {
