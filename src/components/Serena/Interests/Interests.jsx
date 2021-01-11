@@ -95,7 +95,7 @@ function Interests() {
               onChange={user.setInterest}
               labelledBy={"Select"}
               shouldToggleOnHover={true}
-              className= {classes.dropdown}
+              className={classes.dropdown}
             />
             {isVisible ? <NextPage /> : null}
           </form>
@@ -105,6 +105,8 @@ function Interests() {
             </Button>
           </div>
         </div>
+      </main>
+    </div>
   );
 }
 
