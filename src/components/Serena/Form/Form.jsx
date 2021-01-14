@@ -6,8 +6,6 @@ import bird from "./bird.svg";
 import { Button } from "@material-ui/core";
 import { UserContext } from "../../currentData.jsx";
 
-// import firebase from "../firestore";
-
 const useStyles = makeStyles(formStyles);
 
 function Form() {
