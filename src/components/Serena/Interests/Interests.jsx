@@ -36,39 +36,39 @@ function Interests() {
 
   const [selected, setSelected] = useState([]);
 
-    const classes = useStyles();
-    return (
-        <div>
-            <nav className = {classes.link}>
-                <Button className = {classes.btnLink} component={Link} to ="/" exact>Imagication</Button>
-            </nav>
-            <main className = {classes.body}>
-            <figure className = {classes.container}>
-                <img src={bird} alt={"Phoenix Logo"} className = {classes.img}/>
-                <p className={classes.greet}>
-                     Oh, so you're in {user.grade}
+  const classes = useStyles();
+  return (
+    <div>
+      <nav className={classes.link}>
+        <Button className={classes.btnLink} component={Link} to="/" exact>Imagication</Button>
+      </nav>
+      <main className={classes.body}>
+        <figure className={classes.container}>
+          <img src={bird} alt={"Phoenix Logo"} className={classes.img} />
+          <p className={classes.greet}>
+            Oh, so you're in {user.grade}?
                 </p>
-                </figure>
-                <div className = {classes.ctn1}>
-                    <p >What are you interested in today?</p>
-                    <form className = {classes.form}   onClick = {onClick}>
-                        <MultiSelect
-                            options = {options}
-                            value={selected}
-                            onChange={setSelected}
-                            labelledBy={"Select"}
-                            shouldToggleOnHover ={true}
-                            className= {classes.dropdown}
-                           
-                        />
-                        {isVisible ? <NextPage/> : null}
-                    </form>
-                    <div className = {classes.backCtn}>
-                        <Button className = {classes.backBtn} component = {Link} to = "/Form">Back</Button>
-                    </div>
-                </div>
-            </main>
+        </figure>
+        <div className={classes.ctn1}>
+          <p >What are you interested in today?</p>
+          <form className={classes.form} onClick={onClick}>
+            <MultiSelect
+              options={options}
+              value={selected}
+              onChange={setSelected}
+              labelledBy={"Select"}
+              shouldToggleOnHover={true}
+              className={classes.dropdown}
+
+            />
+            {isVisible ? <NextPage /> : null}
+          </form>
+          <div className={classes.backCtn}>
+            <Button className={classes.backBtn} component={Link} to="/Form">Back</Button>
+          </div>
         </div>
+      </main>
+    </div>
   );
 }
 

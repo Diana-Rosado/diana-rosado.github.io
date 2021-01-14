@@ -5,6 +5,7 @@ import {Button} from '@material-ui/core';
 import {Link} from "react-router-dom";
 import bird from '../../Icons/bird.svg'
 import MultiSelect from "react-multi-select-component";
+import Survey from "../Survey/Survey";
 
 const useStyles = makeStyles(resourceStyles);
 
@@ -24,7 +25,7 @@ function Resource() {
         <figure className = {classes.survey_container}>
             <img src={bird} alt={"Phoenix Logo"} className = {classes.img}></img>
             <div className = {classes.textCtn}>
-                <figcaption className = {classes.text}>We hope you’re enjoying Imagication. Would you mind answering a few questions to improve Imagication?</figcaption>
+                <Survey/>
             </div>
         </figure> 
     )
