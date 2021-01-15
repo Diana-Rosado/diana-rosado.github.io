@@ -17,23 +17,17 @@ const surveyStyles = {
         textAlign: 'center',
         transition: 'all 0.2s',
         borderRadius: '0.12em',
-        width: '10%',
+
 
         "&:hover": {
             borderColor: 'rgba(255,255,255,1)',
         },
-        
+
         "@media all and (max-width:30em)": {
             display: 'block',
             margin: '0.4em auto',
-          },
-
-        "& a": {
-            textDecoration: "none",
-            color: 'gray',
-            backgroundColor: 'red',
-            width: '100%',
         },
+
     },
 
     option: {

@@ -1,11 +1,12 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from "@material-ui/core";
 import resourceStyles from "./resourceStyles.js";
-import {Button} from '@material-ui/core';
-import {Link} from "react-router-dom";
+import { Button } from '@material-ui/core';
+import { Link } from "react-router-dom";
 import bird from '../../Icons/bird.svg'
 import MultiSelect from "react-multi-select-component";
 import Survey from "../Survey/Survey";
+import grayCurve from '../../Icons/grayCurve.svg';
 
 const useStyles = makeStyles(resourceStyles);
 
@@ -19,34 +20,40 @@ function Resource() {
         { label: "Career", value: "career" },
         { label: "Volunteering", value: "volunteering" },
         { label: "Scholarships", value: "scholarships" },
-      ];
+    ];
 
-    const SurveyForm = () =>  (
-        <figure className = {classes.survey_container}>
-            <img src={bird} alt={"Phoenix Logo"} className = {classes.img}></img>
-            <div className = {classes.textCtn}>
-                <Survey/>
+    const SurveyForm = () => (
+        <figure className={classes.survey_container}>
+            <img src={bird} alt={"Phoenix Logo"} className={classes.img}></img>
+            <div className={classes.textCtn}>
+                <Survey />
             </div>
-        </figure> 
+        </figure>
     )
     return (
         <div>
-        {/* This section will be the top part of the page */}
-            <article className = {classes.header}>
+            {/* This section will be the top part of the page */}
+            <article className={classes.header}>
                 <nav>
-                    <Button className = {classes.btnLink} component={Link} to ="/" exact>Imagication</Button>
+                    <Button className={classes.btnLink} component={Link} to="/" exact>Imagication</Button>
                 </nav>
-                <div className = {classes.grid}>
-                    <SurveyForm/>
-                    <form className = {classes.form} >
+                <div className={classes.grid}>
+                    <SurveyForm />
+                    <form className={classes.form} >
                         <MultiSelect
-                            options = {options}
+                            options={options}
                             value={selected}
                             onChange={setSelected}
-                            shouldToggleOnHover ={true}
+                            shouldToggleOnHover={true}
                         />
                     </form>
                 </div>
+            </article>
+            <article className={classes.curve}>
+                <img src={grayCurve} alt={""}></img>
+            </article>
+            <article className={classes.cards}>
+                this is where the cards will go
             </article>
         </div>
     )

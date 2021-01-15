@@ -3,9 +3,10 @@ const resourceStyles = {
         backgroundImage: "linear-gradient(to right, #663CC0, #663CBF, #333399)",
         display: 'flex',
         alignItems: 'flex-start',
-        height: '20rem',
+        height: '28rem',
+        zIndex: '-1',
     },
-    btnLink : {
+    btnLink: {
         color: 'white',
         fontWeight: '700',
         fontSize: '20px',
@@ -16,11 +17,11 @@ const resourceStyles = {
     },
     survey_container: {
         backgroundColor: '#E5E5E5',
-        display:'flex',
+        display: 'flex',
         alignItems: 'center',
         borderRadius: '5px',
         padding: '3vh ',
-        margin: '50px auto 50px auto',
+        margin: '80px auto 50px auto',
     },
     img: {
         height: "3rem",
@@ -47,14 +48,31 @@ const resourceStyles = {
 
         "@media (max-width:600px)": {
             marginLeft: '10px'
-          },
-  
+        },
+
     },
 
     form: {
         width: '40vw',
         fontSize: '0.9rem',
+        zIndex: '2',
     },
+
+    curve: {
+        marginTop: "-13.5%",
+        display: 'flex',
+        alignItems: 'flex-end',
+        "& img": {
+            zIndex: '1',
+            width: '100%',
+        },
+    },
+    cards: {
+        backgroundColor: '#F4F4F4',
+        display: 'flex',
+        alignItems: 'flex-start',
+        height: '20em',
+    }
 }
 
 export default resourceStyles;
