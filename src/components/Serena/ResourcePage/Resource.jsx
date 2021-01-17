@@ -69,10 +69,7 @@ const Resource = () => {
     <figure className={classes.survey_container}>
       <img src={bird} alt={"Phoenix Logo"} className={classes.img}></img>
       <div className={classes.textCtn}>
-        <figcaption className={classes.text}>
-          We hope you’re enjoying Imagication. Would you mind answering a few
-          questions to improve Imagication?
-        </figcaption>
+        <Survey />
       </div>
     </figure>
   );
@@ -89,7 +86,7 @@ const Resource = () => {
   };
 
   return (
-    <div className={classes.back}>
+    <div>
       {/* This section will be the top part of the page */}
       <article className={classes.header}>
         <nav>
@@ -108,21 +105,11 @@ const Resource = () => {
             />
           </form>
         </div>
-        {/* This is a test button */}
-        <div
-        // className={classes.nextCtn}
-        >
-          <Button
-            // className={classes.nextBtn}
-            onClick={refresh}
-          >
-            Get Started Now
-          </Button>
-        </div>
       </article>
       <article className={classes.curve}>
         <img src={grayCurve} alt={""}></img>
       </article>
+      <Button onClick={refresh}>Get Started Now</Button>
       <div className={classes.siteList}>
         {academicResources.map((academic) => (
           <div key={academic.id}>

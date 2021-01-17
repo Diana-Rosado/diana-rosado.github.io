@@ -20,24 +20,20 @@ const resourceStyles = {
     alignItems: "center",
     borderRadius: "5px",
     padding: "3vh ",
-    margin: "80px auto 50px auto",
+    margin: "50px auto 50px auto",
   },
   img: {
     height: "3rem",
     width: "5rem",
   },
 
-  grid: {
-    display: "flex",
-    alignItems: "center",
-    flexDirection: "column",
-    height: "50vh",
-    width: "100vw",
-    marginLeft: "-10%",
-
-    "@media (max-width:600px)": {
-      marginLeft: "10px",
-    },
+  textCtn: {
+    width: "40vw",
+  },
+  text: {
+    fontSize: "0.9em",
+    fontWeight: "600",
+    color: "#4d4d4d",
   },
 
   grid: {
@@ -58,7 +54,6 @@ const resourceStyles = {
     fontSize: "0.9rem",
     zIndex: "2",
   },
-
   curve: {
     marginTop: "-13.5%",
     display: "flex",
@@ -67,12 +62,6 @@ const resourceStyles = {
       zIndex: "1",
       width: "100%",
     },
-  },
-  cards: {
-    backgroundColor: "#F4F4F4",
-    display: "flex",
-    alignItems: "flex-start",
-    height: "20em",
   },
 };
 

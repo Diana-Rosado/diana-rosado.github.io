@@ -43,6 +43,12 @@ function Interests() {
     });
   };
 
+  const searchBox = {
+    chips: {
+      background: "#663CBF",
+    },
+  };
+
   const NextPage = () => (
     <div className={classes.next}>
       <Button
