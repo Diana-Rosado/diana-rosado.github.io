@@ -17,14 +17,15 @@ function Interests() {
   const onClick = () => setVisibility(true);
 
   const formatInterests = () => {
-    for (var j = user.interests.length - 1; j >= 0; j--) {
-      user.setInterests(user.interests.splice(j));
-    }
+    // for (var j = user.interests.length - 1; j >= 0; j--) {
+    //   user.setInterests(user.interests.splice(j));
+    // }
+    user.setInterests([]);
 
     for (let i = 0; i < user.interest.length; i++) {
       user.setInterests((prevInterest) => [
         ...prevInterest,
-        user.interest[i].label,
+        user.interest[i].value,
       ]);
     }
     createTrialUsers();
@@ -40,12 +41,6 @@ function Interests() {
       grade: user.grade,
       interests: user.interest,
     });
-  };
-
-  const searchBox = {
-    chips: {
-      background: "#663CBF",
-    },
   };
 
   const NextPage = () => (
