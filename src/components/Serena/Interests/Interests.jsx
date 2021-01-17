@@ -17,14 +17,15 @@ function Interests() {
   const onClick = () => setVisibility(true);
 
   const formatInterests = () => {
-    for (var j = user.interests.length - 1; j >= 0; j--) {
-      user.setInterests(user.interests.splice(j));
-    }
+    // for (var j = user.interests.length - 1; j >= 0; j--) {
+    //   user.setInterests(user.interests.splice(j));
+    // }
+    user.setInterests([]);
 
     for (let i = 0; i < user.interest.length; i++) {
       user.setInterests((prevInterest) => [
         ...prevInterest,
-        user.interest[i].label,
+        user.interest[i].value,
       ]);
     }
     createTrialUsers();
@@ -42,6 +43,11 @@ function Interests() {
     });
   };
 
+  const searchBox = {
+    chips: {
+      background: "#663CBF",
+    },
+  };
 
   const NextPage = () => (
     <div className={classes.next}>
@@ -93,7 +99,7 @@ function Interests() {
                 value={user.interest}
                 onChange={user.setInterest}
                 labelledBy={"Select"}
-                defaultIsOpen='true'
+                defaultIsOpen="true"
                 className={classes.dropdown}
               />
               {isVisible ? <NextPage /> : null}
@@ -101,7 +107,7 @@ function Interests() {
             <div className={classes.back}>
               <Button className={classes.backBtn} component={Link} to="/Form">
                 Back
-            </Button>
+              </Button>
             </div>
           </article>
         </figure>
