@@ -1,12 +1,12 @@
-const interestStyles = {
+const gradeStyles = {
     background: {
         backgroundColor: '#663CBF',
-        height: '100vh',
+        height: '100%',
 
-        "@media (min-height: 200px) and (max-height:700px)": {
-            paddingBottom: '5em',
+        "@media (min-height: 200px) and (max-height:900px)": {
+            paddingBottom: '2.5em',
         },
-        "@media (max-height:300px)": {
+        "@media (max-height:200px)": {
             paddingBottom: '4.5em',
         },
         "@media (min-height:701px) and (max-width:780px)": {
@@ -22,6 +22,12 @@ const interestStyles = {
         "& img": {
             width: '6vw',
             height: '3em',
+        },
+
+        "@media (max-width:780px)": {
+            gridTemplateColumns: 'auto',
+            top: '-1em',
+            padding: '0em',
         },
     },
     btnLink: {
@@ -51,72 +57,74 @@ const interestStyles = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-
-        "@media (max-width:850px)": {
-
-        },
     },
     conText: {
         color: '#663CBF',
         fontWeight: 'bold',
-        fontSize: '4vh',
-
-        "@media (max-width:850px)": {
-            fontSize: '2.5vh',
-            padding: '10%',
-        },
+        fontSize: '5vh',
     },
 
     form: {
-        width: '40vw',
+        display: 'grid',
         margin: '10vh auto',
-        fontSize: '0.9rem',
-        display: 'block',
-        marginTop: '10%',
+        // width: '40%',
+        // height: '60%',
+        gridTemplateColumns: 'auto auto',
+        gridRow: 'auto auto',
+        columnGap: '30px',
+        rowGap: '30px',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'relative',
+        top: '6em',
+        width: '93vw',
+
+        "@media (max-width:850px)": {
+            gridTemplateColumns: 'auto',
+            top: '-1em',
+        },
+
+        "@media (max-height:300px)": {
+            top: '-.75em',
+            rowGap: '8vh',
+        },
     },
 
-    next: {
-        position: 'relative',
-        width: '7em',
-        right: '-45vw',
-        top: '11vh',
-        "@media (max-width:850px)": {
-            position: 'relative',
-            right: '-43vw',
-            top: '7vh'
+    btn: {
+        backgroundColor: '#EBEBEB',
+        borderRadius: '5px',
+        height: '14vh',
+        width: '23em',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: '#818181',
+        boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
+
+        "@media (max-width:850px) ": {
+            height: '10vh',
+            fontSize: '2vw',
         },
-        "@media (max-height:400px) and (max-width: 400px)": {
-            display: 'flex',
-            justifyContent: 'flex-end',
+
+        "@media (max-height:300px)": {
+            fontSize: '1.5vw',
+        },
+    },
+    btnColor: {
+        color: '#663CBF',
+    },
+    next: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        position: 'relative',
+
+
+        "@media (max-width:780px)": {
             position: 'relative',
-            top: '-15vh',
-            marginRight: '200px'
+            bottom: '20vh',
         },
     },
     nextBtn: {
-        textTransform: 'capitalize',
-        color: '#663CBF',
-        fontWeight: 'bold',
-        border: '3px solid #663CBF ',
-        fontSize: '1.3vw',
-        width: '12em',
-        borderRadius: '0.5em',
-        whitespace: 'nowrap',
-
-        "&:hover": {
-            cursor: 'pointer',
-            color: 'white',
-            backgroundColor: "#663CBF",
-            borderRadius: '0.5em',
-        },
-
-        "@media (max-height:400px)": {
-            position: 'fixed',
-            right: '25vw'
-        },
-    },
-
-    backBtn: {
         marginRight: '5vw',
         textTransform: 'capitalize',
         color: '#663CBF',
@@ -138,13 +146,13 @@ const interestStyles = {
         bottom: '6vh',
         width: '50%',
 
-        "@media (max-width:850px)": {
+        "@media (max-width:780px)": {
             position: 'relative',
-            bottom: '10vh',
+            bottom: '25vh',
             left: '5vw',
         },
     },
 
-}
+};
 
-export default interestStyles;
+export default gradeStyles;

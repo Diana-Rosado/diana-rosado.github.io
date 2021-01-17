@@ -8,6 +8,8 @@ import MultiSelect from "react-multi-select-component";
 import Card from "react-bootstrap/Card";
 import firebase from "../firestore";
 import { UserContext } from "../../currentData.jsx";
+import Survey from "../Survey/Survey";
+import grayCurve from "../../Icons/grayCurve.svg";
 
 const useStyles = makeStyles(resourceStyles);
 
@@ -117,6 +119,9 @@ const Resource = () => {
             Get Started Now
           </Button>
         </div>
+      </article>
+      <article className={classes.curve}>
+        <img src={grayCurve} alt={""}></img>
       </article>
       <div className={classes.siteList}>
         {academicResources.map((academic) => (
