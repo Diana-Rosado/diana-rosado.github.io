@@ -43,12 +43,6 @@ function Interests() {
     });
   };
 
-  const searchBox = {
-    chips: {
-      background: "#663CBF",
-    },
-  };
-
   const NextPage = () => (
     <div className={classes.next}>
       <Button
@@ -88,6 +82,11 @@ function Interests() {
               Oh, so you're in {user.grade}? What are you interested in today?
             </figcaption>
           </article>
+          <div className={classes.back}>
+            <Button className={classes.backBtn} component={Link} to="/Form">
+              Back
+              </Button>
+          </div>
           <article>
             <form
               className={classes.form}
@@ -104,11 +103,6 @@ function Interests() {
               />
               {isVisible ? <NextPage /> : null}
             </form>
-            <div className={classes.back}>
-              <Button className={classes.backBtn} component={Link} to="/Form">
-                Back
-              </Button>
-            </div>
           </article>
         </figure>
       </section>

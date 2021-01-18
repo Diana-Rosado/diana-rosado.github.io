@@ -66,7 +66,7 @@ const gradeStyles = {
 
     form: {
         display: 'grid',
-        margin: '10vh auto',
+        margin: '5vh auto',
         // width: '40%',
         // height: '60%',
         gridTemplateColumns: 'auto auto',
@@ -76,8 +76,9 @@ const gradeStyles = {
         alignItems: 'center',
         justifyContent: 'center',
         position: 'relative',
-        top: '6em',
+        top: '2em',
         width: '93vw',
+        zIndex: '1',
 
         "@media (max-width:850px)": {
             gridTemplateColumns: 'auto',
@@ -117,11 +118,12 @@ const gradeStyles = {
         display: 'flex',
         justifyContent: 'flex-end',
         position: 'relative',
-
+        marginLeft: '80vw',
+        top: '6vh',
 
         "@media (max-width:780px)": {
             position: 'relative',
-            bottom: '20vh',
+            top: '-11vh',
         },
     },
     nextBtn: {
@@ -143,14 +145,21 @@ const gradeStyles = {
     back: {
         position: 'relative',
         left: '5vw',
-        bottom: '6vh',
-        width: '50%',
+        bottom: '-55vh',
+        width: '10%',
+        zIndex: '2',
 
         "@media (max-width:780px)": {
             position: 'relative',
-            bottom: '25vh',
+            bottom: '-55vh',
             left: '5vw',
+            width: '10%',
         },
+    },
+    filter: {
+        float: 'left',
+        display: 'inline',
+        backgroundColor: 'red',
     },
 
 };

@@ -49,6 +49,11 @@ function Grade() {
                             I am in . . .
             </figcaption>
                     </article>
+                    <div className={classes.back}>
+                        <Button className={classes.nextBtn} component={Link} to="/Form">
+                            Back
+                        </Button>
+                    </div>
                     <article>
                         <FormControl component="fieldset">
                             <RadioGroup className={classes.form} row aria-label="position" name="position" defaultValue="top">
@@ -104,11 +109,6 @@ function Grade() {
                         </FormControl>
                         {isVisible ? <NextPage /> : null}
                     </article>
-                    <div className={classes.back}>
-                        <Button className={classes.nextBtn} component={Link} to="/Form">
-                            Back
-                        </Button>
-                    </div>
                 </figure>
             </section>
         </div>

@@ -1,6 +1,6 @@
 const resourceStyles = {
   header: {
-    backgroundImage: "linear-gradient(to right, #663CC0, #663CBF, #333399)",
+    backgroundColor: '#663CBF',
     display: "flex",
     alignItems: "flex-start",
     height: "28rem",
@@ -42,7 +42,6 @@ const resourceStyles = {
     flexDirection: "column",
     height: "50vh",
     width: "100vw",
-    marginLeft: "-10%",
 
     "@media (max-width:600px)": {
       marginLeft: "10px",
@@ -61,6 +60,90 @@ const resourceStyles = {
     "& img": {
       zIndex: "1",
       width: "100%",
+    },
+  },
+  siteList: {
+    display: 'grid',
+    gridTemplateColumns: 'auto auto auto',
+    columnGap: '150px',
+    rowGap: '50px',
+    justifyContent: 'center',
+    backgroundColor: '#f4f4f4',
+
+  },
+  siteCard: {
+    width: "23rem",
+    height: "415px",
+    marginBottom: "12px",
+    backgroundColor: "white",
+    borderRadius: '0.5em',
+    boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+    fontFamily: 'sans-serif'
+  },
+
+  siteLogo: {
+    textAlign: 'center',
+    display: 'flex',
+    height: '150px',
+    justifyContent: 'center',
+  },
+
+  siteTitle: {
+    textDecoration: "none",
+    fontWeight: "bold",
+    color: "black",
+    fontSize: "25px",
+    margin: '6%',
+  },
+  siteTags: {
+    fontSize: "15px",
+  },
+
+  siteText: {
+    margin: '6%',
+    fontSize: '17px',
+    color: '#666666'
+  },
+
+  siteBtn: {
+    textTransform: 'capitalize',
+    fontWeight: 'bold',
+    border: '3px solid #663CBF ',
+    fontSize: '1.3vw',
+    width: '10em',
+    borderRadius: '0.5em',
+    whitespace: 'nowrap',
+    marginLeft: '5%',
+    color: '#663CBF',
+
+    "& a": {
+      textDecoration: 'none',
+      color: 'inherit'
+    },
+    "&:hover": {
+      backgroundColor: '#663CBF',
+      color: 'white',
+      boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+    },
+  },
+  refresh: {
+    position: 'relative',
+    right: '14vw',
+    top: '30vh',
+  },
+  refreshBtn: {
+    textTransform: 'capitalize',
+    color: 'white',
+    fontWeight: 'bold',
+    border: '2px solid white ',
+    fontSize: '.9vw',
+    width: '12em',
+    borderRadius: '0.5em',
+    whitespace: 'nowrap',
+
+    "&:hover": {
+      color: 'black',
+      backgroundColor: 'white',
     },
   },
 };
