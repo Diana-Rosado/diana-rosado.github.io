@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core";
 import gradeStyles from "./gradeStyles.js";
 import { Link } from "react-router-dom";
@@ -31,6 +31,12 @@ function Grade() {
           </Button>
         </div>
     );
+
+    useEffect(() => {
+        if (user.level.length === 0) {
+            window.location.href = '/form';
+        }
+    });
 
     return (
         <div className={classes.background}>

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core";
 import interestStyles from "./interestStyles.js";
 import { Button } from "@material-ui/core";
@@ -65,6 +65,14 @@ function Interests() {
   ];
 
   const classes = useStyles();
+
+  useEffect(() => {
+    if (user.grade.length === 0) {
+      window.location.href = '/form';
+    }
+  });
+
+
   return (
     <div className={classes.background}>
       <section className={classes.header}>

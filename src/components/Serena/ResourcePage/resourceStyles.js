@@ -70,6 +70,9 @@ const resourceStyles = {
     justifyContent: 'center',
     backgroundColor: '#f4f4f4',
 
+    "@media (max-width:800px)": {
+      gridTemplateColumns: 'auto',
+    },
   },
   siteCard: {
     width: "23rem",
@@ -78,7 +81,8 @@ const resourceStyles = {
     backgroundColor: "white",
     borderRadius: '0.5em',
     boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
-    fontFamily: 'sans-serif'
+    fontFamily: 'sans-serif',
+    display: 'grid',
   },
 
   siteLogo: {
@@ -86,6 +90,7 @@ const resourceStyles = {
     display: 'flex',
     height: '150px',
     justifyContent: 'center',
+    padding: '10px',
   },
 
   siteTitle: {
@@ -109,11 +114,11 @@ const resourceStyles = {
     textTransform: 'capitalize',
     fontWeight: 'bold',
     border: '3px solid #663CBF ',
-    fontSize: '1.3vw',
-    width: '10em',
-    borderRadius: '0.5em',
-    whitespace: 'nowrap',
-    marginLeft: '5%',
+    // fontSize: '1.3vw',
+    // width: '10em',
+    // borderRadius: '0.5em',
+    // whitespace: 'nowrap',
+    // marginLeft: '5%',
     color: '#663CBF',
 
     "& a": {
@@ -125,11 +130,18 @@ const resourceStyles = {
       color: 'white',
       boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
     },
+
+
   },
   refresh: {
     position: 'relative',
     right: '14vw',
     top: '30vh',
+
+    "@media (max-width:800px)": {
+      right: '5vw',
+      top: '33vh',
+    },
   },
   refreshBtn: {
     textTransform: 'capitalize',
@@ -145,6 +157,7 @@ const resourceStyles = {
       color: 'black',
       backgroundColor: 'white',
     },
+
   },
 };
 

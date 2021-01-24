@@ -15,7 +15,7 @@ function Survey() {
   function noResponse(e) {
     e.preventDefault();
     setVisibility(false);
-    setText("k");
+    setText("Thank you for using Imagication. We hope you have a great day!");
   }
 
   function yesResponse(e) {

@@ -92,7 +92,7 @@ const Resource = () => {
                 <nav>
                     <Button className={classes.btnLink} component={Link} to="/" exact>
                         Imagication
-          </Button>
+                    </Button>
                 </nav>
                 <div className={classes.grid}>
                     <SurveyForm />
@@ -106,7 +106,7 @@ const Resource = () => {
                     </form>
                 </div>
                 <div className={classes.refresh}>
-                    <Button className={classes.refreshBtn} onClick={refresh}>Refresh Results</Button>
+                    <Button className={classes.refreshBtn} onClick={refresh}>Filter</Button>
                 </div>
             </article>
             <article className={classes.curve}>

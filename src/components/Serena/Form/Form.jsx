@@ -8,7 +8,7 @@ import { UserContext } from "../../currentData.jsx";
 
 const useStyles = makeStyles(formStyles);
 
-function Form() {
+function Form(props) {
   const user = useContext(UserContext);
   const classes = useStyles();
 
@@ -19,6 +19,7 @@ function Form() {
     setGrade(false);
     setVisibility(true);
     user.setGrade(grade);
+    user.setLevel(grade);
   };
 
   const NextPage = () => (
