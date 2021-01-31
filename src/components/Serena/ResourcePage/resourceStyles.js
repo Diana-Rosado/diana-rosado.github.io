@@ -4,6 +4,7 @@ const resourceStyles = {
     display: "flex",
     alignItems: "flex-start",
     height: "28rem",
+    width: '100%',
     zIndex: "-1",
   },
   btnLink: {
@@ -63,12 +64,19 @@ const resourceStyles = {
     },
   },
   siteList: {
+    //for extra large laptops
+    // "@media (min-width: 1200px)": {
     display: 'grid',
     gridTemplateColumns: 'auto auto auto',
     columnGap: '150px',
     rowGap: '50px',
     justifyContent: 'center',
     backgroundColor: '#f4f4f4',
+    // },
+
+    "@media (max-width:1200px)": {
+      gridTemplateColumns: 'auto auto',
+    },
 
     "@media (max-width:800px)": {
       gridTemplateColumns: 'auto',
@@ -114,25 +122,28 @@ const resourceStyles = {
     textTransform: 'capitalize',
     fontWeight: 'bold',
     border: '3px solid #663CBF ',
+    textDecoration: 'none',
     // fontSize: '1.3vw',
     // width: '10em',
     // borderRadius: '0.5em',
     // whitespace: 'nowrap',
     // marginLeft: '5%',
     color: '#663CBF',
+    marginLeft: '5%',
 
-    "& a": {
-      textDecoration: 'none',
-      color: 'inherit'
-    },
     "&:hover": {
       backgroundColor: '#663CBF',
       color: 'white',
       boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
     },
-
-
   },
+
+  "& a": {
+    color: 'inherit',
+    backgroundColor: 'red',
+  },
+
+
   refresh: {
     position: 'relative',
     right: '14vw',

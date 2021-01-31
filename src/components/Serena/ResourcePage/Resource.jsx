@@ -140,15 +140,17 @@ const Resource = () => {
                                     {academic.tags}
                                 </Card.Subtitle> */}
               </Card.Body>
-              <Button className={classes.siteBtn}>
-                <a
-                  href={academic.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Read More
-                </a>
-              </Button>
+
+              <a
+                href={academic.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  textDecoration: 'none'
+                }}
+              >
+                <Button className={classes.siteBtn}>Read more</Button>
+              </a>
             </Card>
           </div>
         ))}
