@@ -8,7 +8,7 @@ import MultiSelect from "react-multi-select-component";
 import Card from "react-bootstrap/Card";
 import firebase from "../firestore";
 import { UserContext } from "../../currentData.jsx";
-import Survey from "../Survey/Survey";
+import Survey from "../Survey/Survey.jsx";
 import grayCurve from "../../Icons/grayCurve.svg";
 
 const useStyles = makeStyles(resourceStyles);
@@ -65,14 +65,16 @@ const Resource = () => {
     { label: "Scholarships", value: "scholarships" },
   ];
 
-  const SurveyForm = () => (
-    <figure className={classes.survey_container}>
-      <img src={bird} alt={"Phoenix Logo"} className={classes.img}></img>
-      <div className={classes.textCtn}>
-        <Survey />
-      </div>
-    </figure>
-  );
+  // const SurveyForm = () => (
+
+  //     <figure className={classes.survey_container}>
+  //       <img src={bird} alt={"Phoenix Logo"} className={classes.img}></img>
+  //       <div className={classes.textCtn}>
+  //         <Survey />
+  //       </div>
+  //     </figure>
+
+  // );
 
   const refresh = () => {
     user.setInterests([]);
@@ -90,12 +92,24 @@ const Resource = () => {
       {/* This section will be the top part of the page */}
       <article className={classes.header}>
         <nav>
-          <Button className={classes.btnLink} component={Link} to="/" exact>
+          <Button
+            className={classes.btnLink}
+            component={Link}
+            to="/"
+            exact
+            // onClick={() => window.location.reload()}
+          >
             Imagication
           </Button>
         </nav>
         <div className={classes.grid}>
-          <SurveyForm />
+          {/* <SurveyForm /> */}
+          <figure className={classes.survey_container}>
+            <img src={bird} alt={"Phoenix Logo"} className={classes.img}></img>
+            <div className={classes.textCtn}>
+              <Survey />
+            </div>
+          </figure>
           <form className={classes.form}>
             <MultiSelect
               options={options}

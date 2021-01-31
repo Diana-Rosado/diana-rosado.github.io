@@ -33,9 +33,9 @@ function Interests() {
 
   const createTrialUsers = () => {
     const db = firebase.firestore();
-    db.settings({
-      timestampsInSnapshots: true,
-    });
+    // db.settings({
+    //   timestampsInSnapshots: true,
+    // });
     // const userRef = db.collection("users").add({
     db.collection("users").add({
       grade: user.grade,
