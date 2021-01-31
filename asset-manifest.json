@@ -1,29 +1,31 @@
 {
   "files": {
     "main.css": "/static/css/main.3a82a3f1.chunk.css",
-    "main.js": "/static/js/main.28f7a7a8.chunk.js",
-    "main.js.map": "/static/js/main.28f7a7a8.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ea6e27f9.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ea6e27f9.js.map",
-    "static/js/2.baa34e4f.chunk.js": "/static/js/2.baa34e4f.chunk.js",
-    "static/js/2.baa34e4f.chunk.js.map": "/static/js/2.baa34e4f.chunk.js.map",
-    "static/js/3.8af3031f.chunk.js": "/static/js/3.8af3031f.chunk.js",
-    "static/js/3.8af3031f.chunk.js.map": "/static/js/3.8af3031f.chunk.js.map",
+    "main.js": "/static/js/main.8645d430.chunk.js",
+    "main.js.map": "/static/js/main.8645d430.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d4ab165b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d4ab165b.js.map",
+    "static/js/2.ad9b43cf.chunk.js": "/static/js/2.ad9b43cf.chunk.js",
+    "static/js/2.ad9b43cf.chunk.js.map": "/static/js/2.ad9b43cf.chunk.js.map",
+    "static/js/3.de011758.chunk.js": "/static/js/3.de011758.chunk.js",
+    "static/js/3.de011758.chunk.js.map": "/static/js/3.de011758.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.3a82a3f1.chunk.css.map": "/static/css/main.3a82a3f1.chunk.css.map",
-    "static/js/2.baa34e4f.chunk.js.LICENSE.txt": "/static/js/2.baa34e4f.chunk.js.LICENSE.txt",
+    "static/js/2.ad9b43cf.chunk.js.LICENSE.txt": "/static/js/2.ad9b43cf.chunk.js.LICENSE.txt",
     "static/media/Vector 1.d530dafb.svg": "/static/media/Vector 1.d530dafb.svg",
     "static/media/Vector 2.4f8e3d3d.svg": "/static/media/Vector 2.4f8e3d3d.svg",
     "static/media/bird.95c75568.svg": "/static/media/bird.95c75568.svg",
     "static/media/book.136472ab.svg": "/static/media/book.136472ab.svg",
-    "static/media/hamburger.ed037789.svg": "/static/media/hamburger.ed037789.svg",
+    "static/media/check.cadc1e1a.svg": "/static/media/check.cadc1e1a.svg",
+    "static/media/grayCurve.366de122.svg": "/static/media/grayCurve.366de122.svg",
+    "static/media/hamburger.7556e600.svg": "/static/media/hamburger.7556e600.svg",
     "static/media/magnify.e40b0e8b.svg": "/static/media/magnify.e40b0e8b.svg",
     "static/media/phoenix_white.c1e6ecdf.png": "/static/media/phoenix_white.c1e6ecdf.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ea6e27f9.js",
-    "static/js/2.baa34e4f.chunk.js",
+    "static/js/runtime-main.d4ab165b.js",
+    "static/js/2.ad9b43cf.chunk.js",
     "static/css/main.3a82a3f1.chunk.css",
-    "static/js/main.28f7a7a8.chunk.js"
+    "static/js/main.8645d430.chunk.js"
   ]
 }
