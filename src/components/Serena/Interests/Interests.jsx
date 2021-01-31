@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core";
 import interestStyles from "./interestStyles.js";
 import { Button } from "@material-ui/core";
@@ -43,12 +43,6 @@ function Interests() {
     });
   };
 
-  const searchBox = {
-    chips: {
-      background: "#663CBF",
-    },
-  };
-
   const NextPage = () => (
     <div className={classes.next}>
       <Button
@@ -71,6 +65,14 @@ function Interests() {
   ];
 
   const classes = useStyles();
+
+  useEffect(() => {
+    if (user.grade.length === 0) {
+      window.location.href = '/form';
+    }
+  });
+
+
   return (
     <div className={classes.background}>
       <section className={classes.header}>
@@ -88,6 +90,11 @@ function Interests() {
               Oh, so you're in {user.grade}? What are you interested in today?
             </figcaption>
           </article>
+          <div className={classes.back}>
+            <Button className={classes.backBtn} component={Link} to="/Form">
+              Back
+              </Button>
+          </div>
           <article>
             <form
               className={classes.form}
@@ -104,11 +111,6 @@ function Interests() {
               />
               {isVisible ? <NextPage /> : null}
             </form>
-            <div className={classes.back}>
-              <Button className={classes.backBtn} component={Link} to="/Form">
-                Back
-              </Button>
-            </div>
           </article>
         </figure>
       </section>

@@ -66,14 +66,12 @@ const Resource = () => {
   ];
 
   // const SurveyForm = () => (
-
   //     <figure className={classes.survey_container}>
-  //       <img src={bird} alt={"Phoenix Logo"} className={classes.img}></img>
-  //       <div className={classes.textCtn}>
-  //         <Survey />
-  //       </div>
+  //         <img src={bird} alt={"Phoenix Logo"} className={classes.img}></img>
+  //         <div className={classes.textCtn}>
+  //             <Survey />
+  //         </div>
   //     </figure>
-
   // );
 
   const refresh = () => {
@@ -92,13 +90,7 @@ const Resource = () => {
       {/* This section will be the top part of the page */}
       <article className={classes.header}>
         <nav>
-          <Button
-            className={classes.btnLink}
-            component={Link}
-            to="/"
-            exact
-            // onClick={() => window.location.reload()}
-          >
+          <Button className={classes.btnLink} component={Link} to="/" exact>
             Imagication
           </Button>
         </nav>
@@ -119,33 +111,44 @@ const Resource = () => {
             />
           </form>
         </div>
+        <div className={classes.refresh}>
+          <Button className={classes.refreshBtn} onClick={refresh}>
+            Filter
+          </Button>
+        </div>
       </article>
       <article className={classes.curve}>
         <img src={grayCurve} alt={""}></img>
       </article>
-      <Button onClick={refresh}>Get Started Now</Button>
+
       <div className={classes.siteList}>
         {academicResources.map((academic) => (
           <div key={academic.id}>
             <Card className={classes.siteCard}>
-              <Card.Img src={academic.logo} className={classes.siteLogo} />
+              <div className={classes.siteLogo}>
+                <Card.Img src={academic.logo} />
+              </div>
               <Card.Body>
-                <Card.Title>
+                <Card.Title className={classes.siteTitle}>
                   {" "}
-                  <a
-                    href={academic.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={classes.siteTitle}
-                  >
-                    {academic.title}{" "}
-                  </a>
+                  {academic.title}{" "}
                 </Card.Title>
-                <Card.Subtitle className={classes.siteTags}>
-                  {academic.tags}
-                </Card.Subtitle>
-                <Card.Text>{academic.description}</Card.Text>
+                <Card.Text className={classes.siteText}>
+                  {academic.description}
+                </Card.Text>
+                {/* <Card.Subtitle className={classes.siteTags}>
+                                    {academic.tags}
+                                </Card.Subtitle> */}
               </Card.Body>
+              <Button className={classes.siteBtn}>
+                <a
+                  href={academic.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Read More
+                </a>
+              </Button>
             </Card>
           </div>
         ))}

@@ -8,11 +8,10 @@ import { UserContext } from "../../currentData.jsx";
 
 const useStyles = makeStyles(formStyles);
 
-function Form() {
+function Form(props) {
   const user = useContext(UserContext);
   const classes = useStyles();
 
-  // const [grade, setGrade] = useState(true);
   const [isVisible, setVisibility] = useState(false);
   const [grade, setGrade] = useState(false);
 
@@ -20,6 +19,7 @@ function Form() {
     setGrade(false);
     setVisibility(true);
     user.setGrade(grade);
+    user.setLevel(grade);
   };
 
   const NextPage = () => (
@@ -116,106 +116,8 @@ function Form() {
           </article>
         </figure>
       </section>
-      {/* <nav className={classes.link}>
-        <Button className={classes.btnLink} component={Link} to="/" exact>
-          Imagication
-        </Button>
-      </nav>
-      <main className={classes.body}>
-        <figure className={classes.container}>
-          <img src={bird} alt={"Phoenix Logo"} className={classes.img} />
-          <p className={classes.greet}>
-            Welcome to Imagication! Let's get to know you.
-          </p>
-        </figure>
-        
-        <div className={classes.ctn1}>
-          <p>What grade are you in?</p>
-          <form className={classes.form} data-toggle="buttons">
-            <label className={classes.btn}>
-              <input
-                type="radio"
-                name="options"
-                id="option1"
-                onClick={() => onClick("9th Grade")}
-              />{" "}
-              <span>9th grade</span>
-            </label>
-            <label className={classes.btn}>
-              <input
-                type="radio"
-                name="options"
-                id="option2"
-                onClick={() => onClick("10th Grade")}
-              />{" "}
-              <span>10th grade</span>
-            </label>
-            <label className={classes.btn}>
-              <input
-                type="radio"
-                name="options"
-                id="option3"
-                onClick={() => onClick("11th Grade")}
-              />{" "}
-              <span>11th grade</span>
-            </label>
-            <label className={classes.btn}>
-              <input
-                type="radio"
-                name="options"
-                id="option4"
-                onClick={() => onClick("12th Grade")}
-              />{" "}
-              <span>12th grade</span>
-            </label>
-            {isVisible ? <NextPage /> : null}
-          </form>
-        </div>
-      </main> */}
     </div>
   );
 }
 
 export default Form;
-
-
-{/* <form className={classes.form} data-toggle="buttons">
-              <label className={classes.btn}>
-                <Radio
-                  className={classes.btnColor}
-                  color='#663CBF'
-                  checked={selectedValue === 'a'}
-                  onChange={handleChange}
-                  value="a"
-                  name="options"
-                  id="option1"
-                  onClick={() => onClick("Middle School")}
-                />{" "}
-                <span>Middle School</span>
-              </label>
-              <label className={classes.btn}>
-                <Radio
-                  className={classes.btnColor}
-                  checked={selectedValue === 'b'}
-                  onChange={handleChange}
-                  value="b"
-                  name="options"
-                  id="option2"
-                  onClick={HighSchool}   // edit here
-                />{" "}
-                <span className={classes.checkmark}>High School</span>
-              </label>
-              <label className={classes.btn}>
-                <Radio
-                  className={classes.btnColor}
-                  color='#663CBF'
-                  checked={selectedValue === 'c'}
-                  onChange={handleChange}
-                  value="c"
-                  name="options"
-                  id="option3"
-                  onClick={() => onClick("College or Trade")}
-                />{" "}
-                <span >College or Trade</span>
-              </label>
-            </form>   */}

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core";
 import gradeStyles from "./gradeStyles.js";
 import { Link } from "react-router-dom";
@@ -32,6 +32,12 @@ function Grade() {
         </div>
     );
 
+    useEffect(() => {
+        if (user.level.length === 0) {
+            window.location.href = '/form';
+        }
+    });
+
     return (
         <div className={classes.background}>
             <section className={classes.header}>
@@ -49,6 +55,11 @@ function Grade() {
                             I am in . . .
             </figcaption>
                     </article>
+                    <div className={classes.back}>
+                        <Button className={classes.nextBtn} component={Link} to="/Form">
+                            Back
+                        </Button>
+                    </div>
                     <article>
                         <FormControl component="fieldset">
                             <RadioGroup className={classes.form} row aria-label="position" name="position" defaultValue="top">
@@ -104,11 +115,6 @@ function Grade() {
                         </FormControl>
                         {isVisible ? <NextPage /> : null}
                     </article>
-                    <div className={classes.back}>
-                        <Button className={classes.nextBtn} component={Link} to="/Form">
-                            Back
-                        </Button>
-                    </div>
                 </figure>
             </section>
         </div>

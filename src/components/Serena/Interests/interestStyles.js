@@ -72,7 +72,7 @@ const interestStyles = {
         margin: '10vh auto',
         fontSize: '0.9rem',
         display: 'block',
-        marginTop: '10%',
+        marginTop: '5%',
     },
 
     next: {
@@ -135,12 +135,12 @@ const interestStyles = {
     back: {
         position: 'relative',
         left: '5vw',
-        bottom: '6vh',
+        bottom: '-33vh',
         width: '50%',
 
         "@media (max-width:850px)": {
             position: 'relative',
-            bottom: '10vh',
+            bottom: '-22vh',
             left: '5vw',
         },
     },
