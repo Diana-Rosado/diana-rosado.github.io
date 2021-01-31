@@ -87,7 +87,7 @@ const resourceStyles = {
 
   siteLogo: {
     textAlign: 'center',
-    display: 'flex',
+    display: 'grid',
     height: '150px',
     justifyContent: 'center',
     padding: '10px',

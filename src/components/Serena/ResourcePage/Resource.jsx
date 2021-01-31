@@ -11,6 +11,7 @@ import { UserContext } from "../../currentData.jsx";
 import Survey from "../Survey/Survey";
 import grayCurve from "../../Icons/grayCurve.svg";
 
+
 const useStyles = makeStyles(resourceStyles);
 
 function ToLearn() {
