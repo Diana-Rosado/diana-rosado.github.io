@@ -74,7 +74,7 @@ const resourceStyles = {
     backgroundColor: '#f4f4f4',
     // },
 
-    "@media (max-width:1200px)": {
+    "@media (max-width:1400px)": {
       gridTemplateColumns: 'auto auto',
     },
 
@@ -83,7 +83,7 @@ const resourceStyles = {
     },
   },
   siteCard: {
-    width: "23rem",
+    width: "22rem",
     height: "415px",
     marginBottom: "12px",
     backgroundColor: "white",
