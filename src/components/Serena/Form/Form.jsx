@@ -3,7 +3,13 @@ import { makeStyles } from "@material-ui/core";
 import formStyles from "./formStyles.js";
 import { Link } from "react-router-dom";
 import bird from "./bird.svg";
-import { Button, Radio, FormControlLabel, FormControl, RadioGroup } from "@material-ui/core";
+import {
+  Button,
+  Radio,
+  FormControlLabel,
+  FormControl,
+  RadioGroup,
+} from "@material-ui/core";
 import { UserContext } from "../../currentData.jsx";
 
 const useStyles = makeStyles(formStyles);
@@ -42,12 +48,7 @@ function Form(props) {
 
   const GradeBtn = () => (
     <div className={classes.next}>
-      <Button
-        component={Link}
-        to="/grade"
-        exact
-        className={classes.nextBtn}
-      >
+      <Button component={Link} to="/grade" exact className={classes.nextBtn}>
         Your Grade
       </Button>
     </div>
@@ -66,48 +67,70 @@ function Form(props) {
       <section className={classes.group}>
         <figure className={classes.body}>
           <article className={classes.container}>
-            <figcaption className={classes.conText}>
-              I am in . . .
-            </figcaption>
+            <figcaption className={classes.conText}>I am in . . .</figcaption>
           </article>
           <article>
             <FormControl component="fieldset">
-              <RadioGroup className={classes.form} row aria-label="position" name="position" defaultValue="top">
+              <RadioGroup
+                className={classes.form}
+                row
+                aria-label="position"
+                name="position"
+                defaultValue="top"
+              >
                 <FormControlLabel
                   className={classes.btn}
                   value="MiddleSchool"
                   control={<Radio color="primary" />}
-                  label={<span style={{
-                    fontWeight: 'Bold',
-                    fontSize: '1.2rem',
-                  }}>{'Middle School'}</span>}
+                  label={
+                    <span
+                      style={{
+                        fontWeight: "Bold",
+                        fontSize: "1.2rem",
+                      }}
+                    >
+                      {"Middle School"}
+                    </span>
+                  }
                   onClick={() => onClick("Middle School")}
                   id="middleschool"
-                  name='options'
+                  name="options"
                 />{" "}
                 <FormControlLabel
                   className={classes.btn}
                   value="Highschool"
                   control={<Radio color="primary" />}
-                  label={<span style={{
-                    fontWeight: 'Bold',
-                    fontSize: '1.2rem',
-                  }}>{'High School'}</span>}
+                  label={
+                    <span
+                      style={{
+                        fontWeight: "Bold",
+                        fontSize: "1.2rem",
+                      }}
+                    >
+                      {"High School"}
+                    </span>
+                  }
                   onClick={pickGrade}
-                  id='highschool'
-                  name='options'
+                  id="highschool"
+                  name="options"
                 />{" "}
                 <FormControlLabel
                   className={classes.btn}
                   value="College_Trade"
                   control={<Radio color="primary" />}
-                  label={<span style={{
-                    fontWeight: 'Bold',
-                    fontSize: '1.2rem',
-                  }}>{'College or Trade'}</span>}
+                  label={
+                    <span
+                      style={{
+                        fontWeight: "Bold",
+                        fontSize: "1.2rem",
+                      }}
+                    >
+                      {"College or Trade"}
+                    </span>
+                  }
                   onClick={() => onClick("College or Trade")}
-                  id='collegetrade'
-                  name='options'
+                  id="collegetrade"
+                  name="options"
                 />{" "}
               </RadioGroup>
             </FormControl>
