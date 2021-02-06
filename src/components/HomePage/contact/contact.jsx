@@ -50,7 +50,7 @@ function Contact() {
                 Send us a message and let us know what you think
               </p>
             </div>
-            <form>
+            <form onSubmit={Disappear}>
               <label for="name"></label>
               <input
                 type="text"
@@ -66,7 +66,7 @@ function Contact() {
               <input
                 type="email"
                 id="email"
-                name="email_address"
+                name="email"
                 placeholder="Your Email Address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -82,12 +82,7 @@ function Contact() {
                 onChange={(e) => setComment(e.target.value)}
                 required
               ></textarea>
-              <input
-                type="submit"
-                className={classes.submit}
-                value="Submit"
-                onClick={Disappear}
-              />
+              <input type="submit" className={classes.submit} value="Submit" />
             </form>
           </div>
         ) : null}

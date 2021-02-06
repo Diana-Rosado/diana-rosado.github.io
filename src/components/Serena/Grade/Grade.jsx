@@ -3,7 +3,13 @@ import { makeStyles } from "@material-ui/core";
 import gradeStyles from "./gradeStyles.js";
 import { Link } from "react-router-dom";
 import bird from "../../Icons/bird.svg";
-import { Button, Radio, FormControlLabel, FormControl, RadioGroup } from "@material-ui/core";
+import {
+    Button,
+    Radio,
+    FormControlLabel,
+    FormControl,
+    RadioGroup,
+} from "@material-ui/core";
 import { UserContext } from "../../currentData.jsx";
 
 const useStyles = makeStyles(gradeStyles);
@@ -35,7 +41,7 @@ function Grade() {
 
     useEffect(() => {
         if (user.level.length === 0) {
-            window.location.href = '/form';
+            window.location.href = "/form";
         }
     });
 
@@ -127,4 +133,4 @@ function Grade() {
     )
 }
 
-export default Grade
+export default Grade;
