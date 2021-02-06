@@ -105,7 +105,7 @@ const resourceStyles = {
     textDecoration: "none",
     fontWeight: "bold",
     color: "black",
-    fontSize: "25px",
+    fontSize: "23px",
     margin: '6%',
   },
   siteTags: {

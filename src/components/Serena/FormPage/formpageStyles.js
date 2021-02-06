@@ -1,4 +1,4 @@
-const formStyles = {
+const formpageStyles = {
     background: {
         backgroundColor: '#663CBF',
         height: '100vh',
@@ -160,4 +160,4 @@ const formStyles = {
 
 };
 
-export default formStyles;
+export default formpageStyles;

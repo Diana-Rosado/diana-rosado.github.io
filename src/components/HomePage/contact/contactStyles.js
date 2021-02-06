@@ -73,24 +73,6 @@ const contactStyleSheet = {
     },
   },
 
-  // submit: {
-  //   backgroundColor: "#653CBE",
-  //   color: "white",
-  //   padding: "20px 20px",
-  //   border: "none",
-  //   borderRadius: "4px",
-  //   cursor: "pointer",
-  //   marginLeft: "10%",
-  //   boxShadow: "none",
-  //   width: "100%" /* Full width */,
-  //   fontSize: '17px',
-  //   fontWeight: 'bold',
-  //   outline: 'none',
-
-  //   "&:hover": {
-  //     backgroundColor: "#5A39AE",
-  //   }
-  // },
   title: {
     "& p": {
       color: "#653CBE",
@@ -127,8 +109,6 @@ const contactStyleSheet = {
     display: 'grid',
     alignItems: 'center',
     borderRadius: '5px',
-
-
 
     "& img": {
       width: '100%',

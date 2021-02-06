@@ -7,6 +7,10 @@ export const UserProvider = ({ children }) => {
   const [interests, setInterests] = useState([]);
   const [interest, setInterest] = useState([]);
   const [level, setLevel] = useState([]);
+  const [invisible, setInvisible] = useState(true);
+  const [interestsVisibility, setInterestsVisibility] = useState(false);
+  const [gradeVisibility, setGradeVisibility] = useState(false);
+
   return (
     <UserContext.Provider
       value={{
@@ -17,7 +21,13 @@ export const UserProvider = ({ children }) => {
         interest,
         setInterest,
         level,
-        setLevel
+        setLevel,
+        invisible,
+        setInvisible,
+        interestsVisibility,
+        setInterestsVisibility,
+        gradeVisibility,
+        setGradeVisibility
       }}
     >
       {children}

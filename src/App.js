@@ -4,7 +4,7 @@ import Form from './components/Serena/Form/Form.jsx';
 import Interests from './components/Serena/Interests/Interests.jsx';
 import Resources from './components/Serena/ResourcePage/Resource.jsx';
 import Grade from './components/Serena/Grade/Grade.jsx';
-
+import FormPage from './components/Serena/FormPage/FormPage.jsx';
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact component={HomePage} />
+          <Route path='/formpage' component={FormPage} />
           <Route path="/form" component={Form} />
           <Route path="/interests" component={Interests} />
           <Route path="/resources" component={Resources} />

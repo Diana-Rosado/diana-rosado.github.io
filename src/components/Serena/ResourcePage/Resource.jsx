@@ -85,12 +85,23 @@ const Resource = () => {
     }
   };
 
+  function restartForm() {
+    user.setInvisible(true);
+    user.setInterestsVisibility(false);
+    user.setGradeVisibility(false);
+  }
+
   return (
     <div>
       {/* This section will be the top part of the page */}
       <article className={classes.header}>
         <nav>
-          <Button className={classes.btnLink} component={Link} to="/" exact>
+          <Button className={classes.btnLink}
+            component={Link}
+            to="/"
+            exact
+            onClick={restartForm}
+          >
             Imagication
           </Button>
         </nav>

@@ -72,48 +72,55 @@ function Interests() {
     }
   });
 
-
+  function goBack(e) {
+    user.setInvisible(true);
+    user.setInterestsVisibility(false);
+  }
   return (
-    <div className={classes.background}>
-      <section className={classes.header}>
+    <div>
+      {/* <section className={classes.header}>
         <img src={bird} alt={"Phoenix Logo"} className={classes.img} />
         <nav>
           <Button className={classes.btnLink} component={Link} to="/" exact>
             Imagication
           </Button>
         </nav>
-      </section>
-      <section className={classes.group}>
-        <figure className={classes.body}>
-          <article className={classes.container}>
-            <figcaption className={classes.conText}>
-              Oh, so you're in {user.grade}? What are you interested in today?
+      </section> */}
+      {/* <section className={classes.group}> */}
+      {/* <figure className={classes.body}> */}
+      <article className={classes.container}>
+        <figcaption className={classes.conText}>
+          Oh, so you're in {user.grade}? What are you interested in today?
             </figcaption>
-          </article>
-          <div className={classes.back}>
-            <Button className={classes.backBtn} component={Link} to="/Form">
-              Back
-              </Button>
-          </div>
-          <article>
-            <form
-              className={classes.form}
-              data-toggle="buttons"
-              onClick={onClick}
-            >
-              <MultiSelect
-                options={options}
-                value={user.interest}
-                onChange={user.setInterest}
-                labelledBy={"Select"}
-                defaultIsOpen="true"
-                className={classes.dropdown}
-              />
-              {isVisible ? <NextPage /> : null}
-            </form>
-          </article>
-        </figure>
-      </section>
+      </article>
+      <div className={classes.back}>
+        <Button
+          className={classes.backBtn}
+          // component={Link}
+          // to="/Form"
+          onClick={goBack}
+        >
+          Back
+          </Button>
+      </div>
+      <article>
+        <form
+          className={classes.form}
+          data-toggle="buttons"
+        >
+          <MultiSelect
+            options={options}
+            value={user.interest}
+            onChange={user.setInterest}
+            labelledBy={"Select"}
+            defaultIsOpen="true"
+            className={classes.dropdown}
+          />
+          <NextPage />
+        </form>
+      </article>
+      {/* </figure> */}
+      {/* </section> */}
     </div>
   );
 }

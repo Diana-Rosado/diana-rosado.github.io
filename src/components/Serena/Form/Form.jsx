@@ -8,7 +8,7 @@ import { UserContext } from "../../currentData.jsx";
 
 const useStyles = makeStyles(formStyles);
 
-function Form(props) {
+function Form() {
   const user = useContext(UserContext);
   const classes = useStyles();
 
@@ -18,104 +18,120 @@ function Form(props) {
   const onClick = (grade) => {
     setGrade(false);
     setVisibility(true);
+    user.setInvisible(true);
+    user.setInterestsVisibility(false);
     user.setGrade(grade);
     user.setLevel(grade);
+    user.setGradeVisibility(false);
   };
 
-  const NextPage = () => (
-    <div className={classes.next}>
-      <Button
-        component={Link}
-        to="/interests"
-        exact
-        className={classes.nextBtn}
-      >
-        Next
-      </Button>
-    </div>
-  );
 
-  const pickGrade = () => {
+  const pickGrade = (grade) => {
     setVisibility(false);
     setGrade(true);
+    user.setLevel(grade);
+    user.setGradeVisibility(false);
   };
 
   const GradeBtn = () => (
     <div className={classes.next}>
       <Button
-        component={Link}
-        to="/grade"
-        exact
+        // component={Link}
+        // to="/grade"
+        // exact
+        onClick={F2G}
         className={classes.nextBtn}
       >
         Your Grade
       </Button>
     </div>
   );
+
+  function Disappear(e) {
+    user.setInvisible(false);
+    user.setInterestsVisibility(true);
+  }
+  function F2G() {     //meaning form to grade page
+    user.setInvisible(false);
+    user.setGradeVisibility(true);
+  }
   // Below is what is displayed
   return (
-    <div className={classes.background}>
-      <section className={classes.header}>
+    <div >
+      {/* <section className={classes.header}>
         <img src={bird} alt={"Phoenix Logo"} className={classes.img} />
         <nav>
           <Button className={classes.btnLink} component={Link} to="/" exact>
             Imagication
           </Button>
         </nav>
-      </section>
-      <section className={classes.group}>
-        <figure className={classes.body}>
-          <article className={classes.container}>
-            <figcaption className={classes.conText}>
-              I am in . . .
+      </section> */}
+      {/* <section className={classes.group}> */}
+      {/* <figure className={classes.body}> */}
+      <article className={classes.container}>
+        <figcaption className={classes.conText}>
+          I am in . . .
             </figcaption>
-          </article>
-          <article>
-            <FormControl component="fieldset">
-              <RadioGroup className={classes.form} row aria-label="position" name="position" defaultValue="top">
-                <FormControlLabel
-                  className={classes.btn}
-                  value="MiddleSchool"
-                  control={<Radio color="primary" />}
-                  label={<span style={{
-                    fontWeight: 'Bold',
-                    fontSize: '1.2rem',
-                  }}>{'Middle School'}</span>}
-                  onClick={() => onClick("Middle School")}
-                  id="middleschool"
-                  name='options'
-                />{" "}
-                <FormControlLabel
-                  className={classes.btn}
-                  value="Highschool"
-                  control={<Radio color="primary" />}
-                  label={<span style={{
-                    fontWeight: 'Bold',
-                    fontSize: '1.2rem',
-                  }}>{'High School'}</span>}
-                  onClick={pickGrade}
-                  id='highschool'
-                  name='options'
-                />{" "}
-                <FormControlLabel
-                  className={classes.btn}
-                  value="College_Trade"
-                  control={<Radio color="primary" />}
-                  label={<span style={{
-                    fontWeight: 'Bold',
-                    fontSize: '1.2rem',
-                  }}>{'College or Trade'}</span>}
-                  onClick={() => onClick("College or Trade")}
-                  id='collegetrade'
-                  name='options'
-                />{" "}
-              </RadioGroup>
-            </FormControl>
-            {isVisible ? <NextPage /> : null}
-            {grade ? <GradeBtn /> : null}
-          </article>
-        </figure>
-      </section>
+      </article>
+      <FormControl component="fieldset">
+        <RadioGroup className={classes.form} row aria-label="position" name="position" defaultValue="top">
+          <FormControlLabel
+            className={classes.btn}
+            value="MiddleSchool"
+            control={<Radio color="primary" />}
+            label={<span style={{
+              fontWeight: 'Bold',
+              fontSize: '1.2rem',
+            }}>{'Middle School'}</span>}
+            onClick={() => onClick("Middle School")}
+            id="middleschool"
+            name='options'
+          />{" "}
+          <FormControlLabel
+            className={classes.btn}
+            value="Highschool"
+            control={<Radio color="primary" />}
+            label={<span style={{
+              fontWeight: 'Bold',
+              fontSize: '1.2rem',
+            }}>{'High School'}</span>}
+            onClick={() => pickGrade("High School")}
+            id='highschool'
+            name='options'
+          />{" "}
+          <FormControlLabel
+            className={classes.btn}
+            value="College_Trade"
+            control={<Radio color="primary" />}
+            label={<span style={{
+              fontWeight: 'Bold',
+              fontSize: '1.2rem',
+            }}>{'College or Trade'}</span>}
+            onClick={() => onClick("College or Trade")}
+            id='collegetrade'
+            name='options'
+          />{" "}
+        </RadioGroup>
+        <article>
+          {isVisible ?
+            <div className={classes.next}>
+              <Button
+                // component={Link}
+                // to="/interests"
+                // exact
+                className={classes.nextBtn}
+                onClick={Disappear}
+              >
+                Next
+                </Button>
+            </div>
+            : null}
+          {grade ? <GradeBtn /> : null}
+        </article>
+      </FormControl>
+
+      {/* </figure> */}
+      {/* </section> */}
     </div>
   );
 }
