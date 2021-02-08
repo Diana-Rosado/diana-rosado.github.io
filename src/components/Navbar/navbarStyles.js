@@ -1,6 +1,6 @@
 const navbarStyleSheet = {
   navbar: {
-    backgroundImage: "linear-gradient(to right, #663CC0, #663CBF, #333399)",
+    backgroundColor: '#663CBF',
     display: "flex",
     justifyContent: "space-between",
     paddingTop: "27px",

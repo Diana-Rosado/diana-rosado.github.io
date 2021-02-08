@@ -2,7 +2,6 @@ import React, { useContext, useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core";
 import gradeStyles from "./gradeStyles.js";
 import { Link } from "react-router-dom";
-import bird from "../../Icons/bird.svg";
 import {
     Button,
     Radio,
@@ -28,9 +27,6 @@ function Grade() {
     const NextPage = () => (
         <div className={classes.next}>
             <Button
-                // component={Link}
-                // to="/interests"
-                // exact
                 onClick={G2I}
                 className={classes.nextBtn}
             >
@@ -39,38 +35,29 @@ function Grade() {
         </div>
     );
 
-    useEffect(() => {
-        if (user.level.length === 0) {
-            window.location.href = "/form";
-        }
-    });
-
     function G2I(e) {           //grade to interests
         user.setGradeVisibility(false);
         user.setInterestsVisibility(true);
     }
 
+    function goBack(e) {
+        user.setInvisible(true);
+        user.setGradeVisibility(false);
+    }
     return (
         <div>
-            {/* <section className={classes.header}>
-                <img src={bird} alt={"Phoenix Logo"} className={classes.img} />
-                <nav>
-                    <Button className={classes.btnLink} component={Link} to="/" exact>
-                        Imagication
-          </Button>
-                </nav>
-            </section> */}
-            {/* <section className={classes.group}> */}
-            {/* <figure className={classes.body}> */}
             <article className={classes.container}>
                 <figcaption className={classes.conText}>
                     I am in . . .
                         </figcaption>
             </article>
             <div className={classes.back}>
-                <Button className={classes.nextBtn} component={Link} to="/Form">
+                <Button
+                    className={classes.nextBtn}
+                    onClick={goBack}
+                >
                     Back
-                        </Button>
+                </Button>
             </div>
             <article>
                 <FormControl component="fieldset">
@@ -127,8 +114,6 @@ function Grade() {
                 </FormControl>
                 {isVisible ? <NextPage /> : null}
             </article>
-            {/* </figure> */}
-            {/* </section> */}
         </div>
     )
 }

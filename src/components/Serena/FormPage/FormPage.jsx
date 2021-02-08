@@ -3,18 +3,17 @@ import { makeStyles } from "@material-ui/core";
 import formpageStyles from "./formpageStyles.js";
 import { Link } from "react-router-dom";
 import bird from "../../Icons/bird.svg";
-import { Button, Radio, FormControlLabel, FormControl, RadioGroup } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import { UserContext } from "../../currentData.jsx";
 import Form from '../Form/Form.jsx';
 import Interests from '../Interests/Interests.jsx';
 import Grade from '../Grade/Grade.jsx';
 const useStyles = makeStyles(formpageStyles);
 
-function FormPage(props) {
+function FormPage() {
     const user = useContext(UserContext);
     const classes = useStyles();
 
-    const [text, setText] = useState('I am in ...');
 
     function restartForm() {
         user.setInvisible(true);

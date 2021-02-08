@@ -1,7 +1,7 @@
 const homeStyleSheet = {
   home: {
     height: "568px",
-    backgroundImage: "linear-gradient(to right, #663CC0, #663CBF, #333399)",
+    backgroundColor: '#663CBF',
     display: "flex",
   },
   intro: {

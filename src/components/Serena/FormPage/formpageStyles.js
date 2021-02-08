@@ -26,9 +26,10 @@ const formpageStyles = {
     },
     btnLink: {
         color: 'white',
-        fontWeight: 'bold',
         fontSize: '1.1rem',
         textTransform: 'capitalize',
+        font: 'sans-serif',
+        fontWeight: '600',
     },
 
     group: {

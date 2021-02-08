@@ -22,7 +22,7 @@ function Survey() {
     e.preventDefault();
     setVisibility(false);
     setText("Thank you for your time for filling out the survey.");
-    window.open("https://www.surveymonkey.com/r/LHDNCKR", "_blank");
+    window.open("https://forms.gle/3RdkumK8rNt6PXGZA", "_blank");
   }
 
   return (

@@ -1,9 +1,8 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext } from "react";
 import { makeStyles } from "@material-ui/core";
 import interestStyles from "./interestStyles.js";
 import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import bird from "../Form/bird.svg";
 import MultiSelect from "react-multi-select-component";
 import { UserContext } from "../../currentData.jsx";
 import firebase from "../firestore";
@@ -12,9 +11,6 @@ const useStyles = makeStyles(interestStyles);
 
 function Interests() {
   const user = useContext(UserContext);
-  const [isVisible, setVisibility] = useState(false);
-
-  const onClick = () => setVisibility(true);
 
   const formatInterests = () => {
     // for (var j = user.interests.length - 1; j >= 0; j--) {
@@ -66,11 +62,11 @@ function Interests() {
 
   const classes = useStyles();
 
-  useEffect(() => {
-    if (user.grade.length === 0) {
-      window.location.href = '/form';
-    }
-  });
+  // useEffect(() => {
+  //   if (user.grade.length === 0) {
+  //     window.location.href = '/form';
+  //   }
+  // });
 
   function goBack(e) {
     user.setInvisible(true);

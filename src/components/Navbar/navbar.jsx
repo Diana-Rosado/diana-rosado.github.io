@@ -24,9 +24,6 @@ function Navbar() {
         <li>
           <a href="#contact">Contact Us</a>
         </li>
-        <li>
-          <a href="#donate">Donate</a>
-        </li>
 
         <div className={classes.dropnavbar}>
           <button className={classes.bar}>
@@ -36,7 +33,6 @@ function Navbar() {
             <a href="#mission">Mission</a>
             <a href="#about">How it works</a>
             <a href="#contact">Contact Us</a>
-            <a href="#donate">Donate</a>
           </div>
         </div>
       </ul>

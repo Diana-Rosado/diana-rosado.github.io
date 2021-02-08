@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { makeStyles } from "@material-ui/core";
 import formStyles from "./formStyles.js";
 import { Link } from "react-router-dom";
-import bird from "./bird.svg";
+// import bird from "./bird.svg";
 import {
   Button,
   Radio,
@@ -118,24 +118,31 @@ function Form() {
             name='options'
           />{" "}
         </RadioGroup>
-        <article>
-          {isVisible ?
-            <div className={classes.next}>
-              <Button
-                // component={Link}
-                // to="/interests"
-                // exact
-                className={classes.nextBtn}
-                onClick={Disappear}
-              >
-                Next
-                </Button>
-            </div>
-            : null}
-          {grade ? <GradeBtn /> : null}
-        </article>
       </FormControl>
-
+      <article className={classes.parentBtn}>
+        {isVisible ?
+          <div className={classes.next}>
+            <Button
+              className={classes.nextBtn}
+              onClick={Disappear}
+            >
+              Next
+                </Button>
+          </div>
+          : null}
+        {grade ? <GradeBtn /> : null}
+      </article>
+      <div className={classes.skip}>
+        <Button
+          className={classes.skipBtn}
+          style={{ backgroundColor: 'transparent' }}
+          component={Link}
+          to="/resources"
+          exact
+        >
+          Skip Form
+          </Button>{' '}
+      </div>
       {/* </figure> */}
       {/* </section> */}
     </div>

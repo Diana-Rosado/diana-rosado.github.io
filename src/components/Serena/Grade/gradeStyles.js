@@ -61,7 +61,7 @@ const gradeStyles = {
     conText: {
         color: '#663CBF',
         fontWeight: 'bold',
-        fontSize: '5vh',
+        fontSize: '4vh',
     },
 
     form: {

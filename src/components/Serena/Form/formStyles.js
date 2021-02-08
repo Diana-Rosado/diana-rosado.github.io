@@ -1,4 +1,14 @@
 const formStyles = {
+
+    "@keyframes popOut": {
+        "0%": {
+            transform: "scale (1)"
+        },
+        "100%": {
+            transform: "scale(1.1)",
+            color: 'gray',
+        }
+    },
     background: {
         backgroundColor: '#663CBF',
         height: '100vh',
@@ -122,6 +132,7 @@ const formStyles = {
         justifyContent: 'flex-end',
         position: 'relative',
         bottom: '-20vh',
+        backgroundColor: 'red',
 
         "@media (max-width:1000px)": {
             position: 'relative',
@@ -144,6 +155,8 @@ const formStyles = {
         fontSize: '1.3vw',
         width: '7em',
         borderRadius: '0.5em',
+        position: 'absolute',
+        zIndex: '1',
 
         "&:hover": {
             backgroundColor: '#663CBF',
@@ -156,6 +169,29 @@ const formStyles = {
             fontSize: '16px'
         },
 
+    },
+
+    skip: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        marginRight: '6vw',
+
+
+    },
+    skipBtn: {
+        fontFamily: 'sans-serif',
+        color: '#B5B5B5',
+        position: 'absolute',
+        bottom: '30px',
+        zIndex: '100',
+
+        "&:hover": {
+            animation: '$popOut 0.3s forwards'
+        },
+        "@media (max-width:1000px) ": {
+            position: 'relative',
+            bottom: '-40px',
+        },
     },
 
 };
