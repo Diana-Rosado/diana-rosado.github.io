@@ -17,8 +17,9 @@ function Home() {
         <div className={classes.intro}>
           <div>
             <h1>Imagication</h1>
-            <p>Enhancing your educational journey.</p>
-            <Button className={classes.buttonStyle} component={Link} to="/formpage" >Get Started Now</Button>
+            <p>Get notified when we launch!</p>
+            <Button href="#contact" className={classes.buttonStyle}>Notify me</Button>
+            {/* <Button className={classes.buttonStyle} component={Link} to="/formpage" >Get Started Now</Button> */}
           </div>
         </div>
         <div className={classes.homeImage}>

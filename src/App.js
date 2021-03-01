@@ -5,6 +5,7 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Resources from './components/Serena/ResourcePage/Resource.jsx';
 // import Grade from './components/Serena/Grade/Grade.jsx';
 import FormPage from './components/Serena/FormPage/FormPage.jsx';
+import SignIn from './components/SignIn/SignIn.jsx';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/interests" component={Interests} /> */}
           <Route path="/resources" component={Resources} />
           {/* <Route path='/grade' component={Grade} /> */}
+          <Route path="/register" component={SignIn} />
         </Switch>
       </Router>
     </div>

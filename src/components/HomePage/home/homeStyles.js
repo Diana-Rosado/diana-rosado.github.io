@@ -25,7 +25,7 @@ const homeStyleSheet = {
       },
     },
     "& p": {
-      fontSize: "34px",
+      fontSize: "30px",
       paddingRight: "40px",
       marginTop: "0px",
 
@@ -72,26 +72,26 @@ const homeStyleSheet = {
     },
   },
   buttonStyle: {
-    backgroundColor: "#4928A5",
+    backgroundColor: "#ED5019",
     border: "none",
-    borderRadius: "50px",
+    borderRadius: "10px",
     outline: "none",
     height: "60px",
-    width: "230px",
+    width: "200px",
     color: "white",
     fontSize: "20px",
     fontWeight: "bold",
     marginTop: "-20px",
 
     "&:hover": {
-      backgroundColor: "#333399",
+      backgroundColor: "#DF4D1A",
     },
 
     "@media (max-width:1300px)": {
       height: "50px",
       width: "220px",
       fontSize: "20px",
-      borderRadius: "40px",
+      borderRadius: "10px",
       marginTop: "20px",
     },
   },
