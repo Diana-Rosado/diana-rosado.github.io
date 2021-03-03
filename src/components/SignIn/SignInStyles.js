@@ -78,11 +78,14 @@ const SignInStyles = {
         height: '50px',
         border: 'solid #7864FB',
         fontWeight: 'bold',
+        fontSize: '18px',
 
         "&:hover": {
             backgroundColor: '#8f7ffc',
             cursor: 'pointer',
-            animation: '$colorChange 0.5s forwards'
+            animation: '$colorChange 0.5s forwards',
+            outline: 'none',
+            boxShadow: '-5px 7px 23px -4px rgba(0,0,0,0.37)',
         },
     }
 

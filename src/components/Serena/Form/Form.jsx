@@ -42,9 +42,6 @@ function Form() {
   const GradeBtn = () => (
     <div className={classes.next}>
       <Button
-        // component={Link}
-        // to="/grade"
-        // exact
         onClick={F2G}
         className={classes.nextBtn}
       >
@@ -64,16 +61,6 @@ function Form() {
   // Below is what is displayed
   return (
     <div >
-      {/* <section className={classes.header}>
-        <img src={bird} alt={"Phoenix Logo"} className={classes.img} />
-        <nav>
-          <Button className={classes.btnLink} component={Link} to="/" exact>
-            Imagication
-          </Button>
-        </nav>
-      </section> */}
-      {/* <section className={classes.group}> */}
-      {/* <figure className={classes.body}> */}
       <article className={classes.container}>
         <figcaption className={classes.conText}>
           I am in . . .

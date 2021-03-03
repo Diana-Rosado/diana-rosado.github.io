@@ -40,18 +40,10 @@ function FormPage() {
             </section>
             <section className={classes.group}>
                 <figure className={classes.body}>
-                    {/* <article className={classes.container}>
-                        <figcaption className={classes.conText}>
-                            {text}
-                        </figcaption>
-                    </article> */}
                     {user.invisible ? <Form /> : null}
                     {user.interestsVisibility ? <Interests /> : null}
                     {user.gradeVisibility ? <Grade /> : null
                     }
-                    {/* button - >onClick {sets State ^^^ false >>true} 
-                    grade page onCLICK {diff state}
-                    */}
 
                 </figure>
             </section>
