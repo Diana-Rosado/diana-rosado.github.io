@@ -20,6 +20,9 @@ const contactStyleSheet = {
     },
   },
 
+  background: {
+
+  },
   contactus: {
     borderRadius: "5px",
     backgroundColor: "#E6E8EC",
@@ -32,6 +35,7 @@ const contactStyleSheet = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+
 
     "& input, textarea": {
       width: "80%" /* Full width */,
@@ -54,7 +58,7 @@ const contactStyleSheet = {
 
 
     "& input[type=submit]": {
-      backgroundColor: "#653CBE",
+      backgroundColor: "#7864fb",
       color: "white",
       padding: "20px 20px",
       border: "none",
@@ -67,7 +71,7 @@ const contactStyleSheet = {
     },
 
     "& input[type=submit]:hover": {
-      backgroundColor: "#5A39AE",
+      backgroundColor: "#695cc7",
       boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
       animation: '$myEffect 0.3s forwards'
     },
@@ -75,8 +79,8 @@ const contactStyleSheet = {
 
   title: {
     "& p": {
-      color: "#653CBE",
-      fontWeight: "600",
+
+      fontWeight: "800",
       fontSize: "30px",
       textAlign: "center",
     },
@@ -122,6 +126,10 @@ const contactStyleSheet = {
       textAlign: 'center',
       marginTop: '-30px',
     },
-  }
+  },
+  Wave: {
+    position: 'relative',
+    top: '35px',
+  },
 };
 export default contactStyleSheet;

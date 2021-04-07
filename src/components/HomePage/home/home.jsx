@@ -1,10 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
-import bird from "./bird.svg";
-import vector1 from "./Vector 1.svg";
-import { Link } from "react-router-dom";
 import { Button } from "@material-ui/core";
 import homeStyleSheet from "./homeStyles.js";
+import art from "../../Icons/art.jpg";
 
 const useStyles = makeStyles(homeStyleSheet);
 
@@ -12,25 +10,39 @@ function Home() {
   const classes = useStyles();
 
   return (
-    <div>
-      <div className={classes.home}>
-        <div className={classes.intro}>
-          <div>
-            <h1>Imagication</h1>
-            <p>Get notified when we launch!</p>
-            <Button href="#contact" className={classes.buttonStyle}>Notify me</Button>
-            {/* <Button className={classes.buttonStyle} component={Link} to="/formpage" >Get Started Now</Button> */}
-          </div>
+    <div className={classes.home}>
+      <section className={classes.header}>
+        <h3 className={classes.title}>
+          Imagication
+        </h3>
+      </section>
+      <section className={classes.art}>
+        <div className={classes.img}>
+          <img
+            className={classes.background}
+            src={art}
+            alt={"background"}
+          >
+          </img>
         </div>
-        <div className={classes.homeImage}>
-          <div>
-            <img src={bird} alt={""}></img>
-          </div>
+      </section>
+      <section className={classes.mission}>
+        <section className={classes.missionBody}>
+          <h1 className={classes.missionTitle}>
+            The Guidance Counselor That <b style={{ color: '#764BF7' }}>Everyone</b> Deserves
+        </h1>
+          <div className={classes.missionInfo}>
+            Planning for what to do after high school is never easy. Let's figure it out together!
         </div>
-      </div>
-      <div className={classes.vector1}>
-        <img src={vector1} alt={""}></img>
-      </div>
+        </section>
+      </section>
+      <section className={classes.btn}>
+        <div className={classes.btnLocation}>
+          <Button className={classes.btnCTA}>
+            Get Started
+        </Button>
+        </div>
+      </section>
     </div>
   );
 }

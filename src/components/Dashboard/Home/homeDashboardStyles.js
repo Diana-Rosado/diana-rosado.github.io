@@ -1,40 +1,13 @@
-import { Grid } from "@material-ui/core";
+
 
 const homeDashboardStyles = {
-  logo: {
-    gridArea: 'logo',
-    height: '10vh',
-  },
-  logoBtn: {
-    fontWeight: 'bold',
-    position: "relative",
-    top: '2.5vh',
-    fontSize: '16px',
-    textTransform: 'capitalize',
-  },
 
-  nav: {
-    gridArea: 'sidebar',
-    height: '80vh',
-    display: 'flex',
-    flexWrap: 'wrap',
-    flexFlow: 'column wrap',
-  },
 
-  navBtn: {
-    fontFamily: 'sans-Serif',
-    color: '#AAA5A9',
-    padding: '20px',
-    textTransform: 'capitalize',
-    fontSize: '15px',
-
-    "&:hover": {
-      fontWeight: 'bold',
-      color: 'black',
-    },
-  },
-  logOut: {
-    gridArea: 'footer',
+  welcome: {
+    width: '50%',
+    fontSize: '30px',
+    position: 'relative',
+    left: '100px',
   },
 
   dashboard: {
@@ -49,6 +22,7 @@ const homeDashboardStyles = {
     height: '60vh',
     display: 'flex',
     justifyContent: 'center',
+
   },
 
   content: {
@@ -60,9 +34,45 @@ const homeDashboardStyles = {
     borderRadius: '20px',
   },
 
+  information: {
+    color: 'white',
+    width: '30%',
+    textAlign: 'center',
+    height: '100%',
+    position: 'relative',
+    left: '50px',
+
+  },
+
+  text: {
+    position: 'relative',
+    top: '30px',
+    fontSize: '40px',
+    // backgroundColor: 'green',
+  },
+
+  start: {
+    position: 'relative',
+    top: '60px',
+  },
+
+  startBtn: {
+    backgroundColor: '#35CD8E',
+    width: '200px',
+    color: 'white',
+    fontWeight: 'bold',
+    borderRadius: '10px',
+    height: '50px',
+    fontSize: '18px',
+
+    "&:hover": {
+      backgroundColor: '#44DC9D',
+    },
+  },
+
   home: {
     display: 'grid',
-    gridTemplateColumns: '20vw 70vw 10vw',
+    gridTemplateColumns: '20vw 65vw 15vw',
     gridTemplateRows: '10vh 80vh 10vh',
     gridTemplateAreas: `
         "logo header user"
@@ -71,14 +81,15 @@ const homeDashboardStyles = {
       `
   },
 
-  sidebar: {
-    backgroundColor: '#F7F7F7',
-    height: '100vh',
-    boxShadow: '14px 0px 27px -14px rgba(131,131,131,0.63)',
-    textAlign: 'center',
-    position: 'fixed',
-    width: '20vw',
+
+  startImg: {
+    width: '100px',
+    height: '100px',
+    position: 'relative',
+    top: '-350px',
+    left: '350px',
   },
+
 
 };
 

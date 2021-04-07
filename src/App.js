@@ -3,7 +3,7 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Resources from './components/Serena/ResourcePage/Resource.jsx';
 import FormPage from './components/Serena/FormPage/FormPage.jsx';
 import SignIn from './components/SignIn/SignIn.jsx';
-import homeDashboard from './components/Dashboard/Home/homeDashboard.jsx';
+import Dashboard from './components/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
           <Route path='/formpage' component={FormPage} />
           <Route path="/resources" component={Resources} />
           <Route path="/register" component={SignIn} />
-          <Route path="/home" component={homeDashboard} />
+          <Route path="/dashboard" component={Dashboard} />
         </Switch>
       </Router>
     </div>

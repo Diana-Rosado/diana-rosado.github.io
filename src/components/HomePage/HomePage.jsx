@@ -1,16 +1,17 @@
 import React from "react";
-import Navbar from "../Navbar/navbar.jsx";
 import Home from "./home/home.jsx";
-import Mission from "./mission/mission.jsx";
 import HowItWorks from "./howitworks/howitworks.jsx";
 import Contact from "./contact/contact.jsx";
+import { makeStyles } from "@material-ui/core";
+import HomePageStyles from './HomePageStyles.js';
+
+const useStyles = makeStyles(HomePageStyles);
 
 function HomePage() {
+  const classes = useStyles();
   return (
-    <div>
-      <Navbar />
+    <div className={classes.background}>
       <Home />
-      <Mission />
       <HowItWorks />
       <Contact />
     </div>

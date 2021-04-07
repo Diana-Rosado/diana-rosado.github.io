@@ -1,7 +1,6 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import { makeStyles } from "@material-ui/core";
 import gradeStyles from "./gradeStyles.js";
-import { Link } from "react-router-dom";
 import {
     Button,
     Radio,

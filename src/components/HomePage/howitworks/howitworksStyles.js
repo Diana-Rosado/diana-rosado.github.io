@@ -1,45 +1,74 @@
 const howitworksStyleSheet = {
-  mission: {
-    backgroundColor: "#653CBE",
-    color: "white",
-    textAlign: "center",
-    width: "100%",
-    "& h1": {
-      fontSize: "30px",
-      paddingTop: "50px",
-    },
-    "& figure": {
-      fontSize: "16px",
-      display: "inline-block",
-      width: "calc(100%/4.5)",
+  table: {
+    overflowX: 'hidden',
+    display: 'inline-block'
+  },
+  block1: {
+    display: 'grid',
+    gridTemplateColumns: '50vw 50vw',
+    gridTemplateRows: '60vh',
+    gridTemplateAreas: `
+    "img1 text1"
+    `,
+    marginTop: '100px',
 
-      "@media (max-width:740px)": {
-        display: "block",
-        marginLeft: "auto",
-        marginRight: "auto",
-        width: "35%",
-      },
-      "& img": {
-        paddingTop: "30px",
-        width: "133px",
-        height: "175px",
+  },
 
-        "@media (max-width:1300px)": {
-          width: "100px",
-          height: "133px",
-        },
-      },
-      "& p": {
-        paddingTop: "15px",
-        width: "350px",
-        paddingBottom: "100px",
+  img1: {
+    display: 'flex',
+    justifyContent: 'center',
+  },
 
-        "@media (max-width:1300px)": {
-          fontSize: "15px",
-          width: "80%",
-        },
-      },
-    },
+  text1: {
+    display: 'flex',
+    flexDirection: 'column',
+    lineHeight: '30px',
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: '45px',
+    width: '60%',
+    lineHeight: '50px',
+
+  },
+  info: {
+    width: '60%',
+    fontSize: '19px',
+    color: '#5A5C5F',
+    lineHeight: '2',
+  },
+
+  RoadMap: {
+    height: '412px',
+    marginLeft: '200px',
+  },
+
+  block2: {
+    display: 'grid',
+    gridTemplateColumns: '50vw 50vw',
+    gridTemplateRows: '60vh',
+    gridTemplateAreas: `
+    "text2 img2"
+    `,
+    marginTop: '100px',
+    backgroundColor: '#F6F6F6'
+  },
+
+  Modules: {
+    height: '412px',
+  },
+
+  text2: {
+    display: 'flex',
+    flexDirection: 'column',
+    lineHeight: '30px',
+    alignItems: 'center',
+
+  },
+
+  Wave: {
+    position: 'relative',
+    top: '120px',
   },
 };
 export default howitworksStyleSheet;
