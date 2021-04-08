@@ -4,17 +4,17 @@ const homeDashboardStyles = {
 
 
   welcome: {
-    width: '50%',
+    width: '70%',
     fontSize: '30px',
     position: 'relative',
     left: '100px',
   },
 
   dashboard: {
-    gridColumnStart: '2',
-    gridColumnEnd: 'two',
-    gridRowStart: 'row1-end',
-    gridRowEnd: '2'
+    gridColumnStart: '1',
+    gridColumnEnd: 'end',
+    gridRowStart: '1',
+    gridRowEnd: 'end'
   },
 
   banner: {
@@ -28,9 +28,8 @@ const homeDashboardStyles = {
   content: {
     height: '350px',
     backgroundColor: '#764BF7',
-    width: '70%',
+    width: '80%',
     position: 'relative',
-    left: '-100px',
     borderRadius: '20px',
   },
 
@@ -47,7 +46,7 @@ const homeDashboardStyles = {
   text: {
     position: 'relative',
     top: '30px',
-    fontSize: '40px',
+    fontSize: '35px',
     // backgroundColor: 'green',
   },
 
@@ -72,12 +71,12 @@ const homeDashboardStyles = {
 
   home: {
     display: 'grid',
-    gridTemplateColumns: '20vw 65vw 15vw',
+    gridTemplateColumns: '65vw ',
     gridTemplateRows: '10vh 80vh 10vh',
     gridTemplateAreas: `
-        "logo header user"
-        "sidebar banner ."
-        "footer resources . "
+        " header "
+        " banner "
+        " resources"
       `
   },
 

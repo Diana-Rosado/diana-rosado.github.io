@@ -14,7 +14,7 @@ function App() {
           <Route path='/formpage' component={FormPage} />
           <Route path="/resources" component={Resources} />
           <Route path="/register" component={SignIn} />
-          <Route path="/dashboard" component={Dashboard} />
+          <Route path="/home" component={Dashboard} />
         </Switch>
       </Router>
     </div>
