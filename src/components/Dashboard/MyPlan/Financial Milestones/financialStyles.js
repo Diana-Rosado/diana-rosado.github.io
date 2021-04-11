@@ -59,8 +59,22 @@ const financialStyles = {
         bottom: '75px',
     },
 
-    titleModule: {
+    Module: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column'
+    },
 
+    titleModule: {
+        height: '50px',
+        display: 'grid',
+        alignItems: 'center',
+        borderBottom: '2px solid #C4C4C4',
+        width: '80%',
+    },
+    titleText: {
+        fontSize: '20px',
     },
 }
 

@@ -3,6 +3,12 @@ import { makeStyles } from "@material-ui/core";
 import { Button } from "@material-ui/core";
 import homeStyleSheet from "./homeStyles.js";
 import art from "../../Icons/art.jpg";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 const useStyles = makeStyles(homeStyleSheet);
 
@@ -38,7 +44,11 @@ function Home() {
       </section>
       <section className={classes.btn}>
         <div className={classes.btnLocation}>
-          <Button className={classes.btnCTA}>
+          <Button
+            className={classes.btnCTA}
+            component={Link}
+            to="/home"
+          >
             Get Started
         </Button>
         </div>

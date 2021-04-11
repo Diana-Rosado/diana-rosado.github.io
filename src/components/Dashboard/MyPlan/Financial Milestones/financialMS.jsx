@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { makeStyles } from "@material-ui/core";
 import financialStyles from './financialStyles.js';
 import { Button } from "@material-ui/core";
 import Money from '../../../Icons/Money.svg';
-
+// import { CollegeContext, CollegeProvider } from './CollegeContext.jsx';
+import College from './College.js';
+import { CollegeContext, CollegeProvider } from './CollegeContext.jsx';
+import CollegeList from './CollegeList.js';
+import CollegeCount from './CollegeCount.js';
+import AddCollege from './AddCollege.js';
 
 const useStyles = makeStyles(financialStyles);
+
 
 
 function FinancialMS() {
@@ -14,7 +20,6 @@ function FinancialMS() {
     const [count, setCount] = useState(0);
     const [visible, hidden] = useState(true);
     const [content, setContent] = useState(false);
-
 
     const components = [
         <div><Questions /></div>,
@@ -27,20 +32,25 @@ function FinancialMS() {
         setContent(true);
     }
 
-    function Questions() {
 
+    function Questions() {
         return (
-            <div className={classes.Module}>
-                <section className={classes.titleModule}>
-                    <div>
-                        {question}
+            <CollegeProvider>
+                <div className={classes.Module}>
+                    <section className={classes.titleModule}>
+                        <div className={classes.titleText}>
+                            Which colleges have you applied to?
                     </div>
-                </section>
-                <br></br>
-                <section className={classes.contentModule}>
-                    content
-                </section>
-            </div >
+                    </section>
+                    <br></br>
+                    <CollegeCount />
+                    <section className={classes.contentModule}>
+                        <AddCollege />
+                        <CollegeList />
+
+                    </section>
+                </div >
+            </CollegeProvider>
 
         );
     }
@@ -73,8 +83,8 @@ function FinancialMS() {
                             >Get Started </Button> : null}
                             {content ?
                                 <div>
-                                    {count > 0 && <button onClick={() => setCount(count - 1)}>prev</button>}
-                                    {count < components.length - 1 && <button onClick={() => setCount(count + 1)}>next</button>}
+                                    {count > 0 && <Button className={classes.getStartedBtn} onClick={() => setCount(count - 1)}>prev</Button>}
+                                    {count < components.length - 1 && <Button className={classes.getStartedBtn} onClick={() => setCount(count + 1)}>next</Button>}
                                 </div> : null
                             }
 

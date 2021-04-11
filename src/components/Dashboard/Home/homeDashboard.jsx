@@ -16,7 +16,9 @@ function Dashboard() {
                         <section className={classes.information}>
                             <div className={classes.text}>College planning made <strong>simply</strong> for you</div>
                             <div className={classes.start}>
-                                <Button className={classes.startBtn}>Let's get started</Button>
+                                <Button
+                                    className={classes.startBtn}
+                                >Let's get started</Button>
                             </div>
                         </section>
                         <section className={classes.startImg}>
