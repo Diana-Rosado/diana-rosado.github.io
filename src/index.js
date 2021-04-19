@@ -4,13 +4,14 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { UserProvider } from "./components/currentData.jsx";
+import { CollegeProvider } from "../src/components/Dashboard/MyPlan/Financial Milestones/CollegeContext.jsx"
 
 ReactDOM.render(
-  <UserProvider>
+  <CollegeProvider>
     <React.StrictMode>
       <App />
     </React.StrictMode>
-  </UserProvider>,
+  </CollegeProvider>,
 
   document.getElementById("root")
 );

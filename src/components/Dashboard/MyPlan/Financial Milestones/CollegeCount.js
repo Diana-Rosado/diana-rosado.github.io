@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { makeStyles } from "@material-ui/core";
 import { CollegeContext } from './CollegeContext.jsx';
-import College from './College.js';
 import financialStyles from './financialStyles.js';
 
 const useStyles = makeStyles(financialStyles);

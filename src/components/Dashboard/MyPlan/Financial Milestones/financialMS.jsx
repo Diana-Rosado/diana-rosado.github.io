@@ -1,14 +1,14 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { makeStyles } from "@material-ui/core";
 import financialStyles from './financialStyles.js';
 import { Button } from "@material-ui/core";
 import Money from '../../../Icons/Money.svg';
-// import { CollegeContext, CollegeProvider } from './CollegeContext.jsx';
-import College from './College.js';
-import { CollegeContext, CollegeProvider } from './CollegeContext.jsx';
 import CollegeList from './CollegeList.js';
 import CollegeCount from './CollegeCount.js';
 import AddCollege from './AddCollege.js';
+import { CollegeContext } from './CollegeContext.jsx'
+import Calculator from "./Calculator.jsx";
+import College from './College.js';
 
 const useStyles = makeStyles(financialStyles);
 
@@ -16,14 +16,13 @@ const useStyles = makeStyles(financialStyles);
 
 function FinancialMS() {
 
-    const [question, setQuestion] = useState("Which colleges have you applied to?");
     const [count, setCount] = useState(0);
     const [visible, hidden] = useState(true);
     const [content, setContent] = useState(false);
 
     const components = [
         <div><Questions /></div>,
-        <div>2</div>,
+        <div><CollegeList /></div>,
         <div>3</div>
     ];
 
@@ -35,25 +34,25 @@ function FinancialMS() {
 
     function Questions() {
         return (
-            <CollegeProvider>
-                <div className={classes.Module}>
-                    <section className={classes.titleModule}>
-                        <div className={classes.titleText}>
-                            Which colleges have you applied to?
+            <div className={classes.Module}>
+                <section className={classes.titleModule}>
+                    <div className={classes.titleText}>
+                        Enter the college's information
                     </div>
-                    </section>
-                    <br></br>
-                    <CollegeCount />
-                    <section className={classes.contentModule}>
-                        <AddCollege />
-                        <CollegeList />
+                </section>
+                <br></br>
+                {/* <CollegeCount /> */}
+                <section className={classes.contentModule}>
+                    {/* <AddCollege /> */}
+                    <Calculator />
+                    {/* <CollegeList /> */}
 
-                    </section>
-                </div >
-            </CollegeProvider>
+                </section>
+            </div >
 
         );
     }
+
 
     const classes = useStyles();
     return (

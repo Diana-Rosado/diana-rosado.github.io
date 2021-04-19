@@ -22,6 +22,9 @@ const AddCollege = () => {
         setColleges(prevColleges => [...prevColleges, { name: name }])
 
     };
+
+
+
     return (
         <div>
             <form onSubmit={addCollege}>
@@ -33,6 +36,7 @@ const AddCollege = () => {
                     required />
                 <button>Submit</button>
             </form>
+            <h3>{name}</h3>
         </div>
     )
 }

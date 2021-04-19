@@ -76,6 +76,56 @@ const financialStyles = {
     titleText: {
         fontSize: '20px',
     },
+    blocks: {
+        display: 'grid',
+        gridTemplateColumns: '16vw 16vw 17vw ',
+        gridTemplateRows: '20vh 20vh',
+        gridTemplateAreas: `
+            " block1 block2 block3 "
+            " block4 block5 block6 "
+          `,
+        textAlign: 'left',
+
+    },
+
+    values: {
+        "& label": {
+            fontSize: '17px',
+            fontFamily: 'sans-serif',
+            color: '#4D4D4D'
+        },
+
+        "& input": {
+            width: '150px',
+            marginTop: '15px',
+            height: '30px',
+            border: '1px solid #9F9F9F',
+            borderRadius: '3px',
+
+            "&::placeholder": {
+                color: "#CBCBCB",
+                marginLeft: '20px',
+            },
+        },
+    },
+
+    total: {
+        border: '1px solid #9F9F9F',
+        height: '45px',
+        width: '150px',
+        marginLeft: '10px',
+        display: 'flex',
+        alignItems: 'center',
+        fontSize: '18px',
+        borderRadius: '3px'
+    },
+    estimation: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+    },
+
 }
+
 
 export default financialStyles;
