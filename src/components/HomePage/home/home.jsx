@@ -3,12 +3,7 @@ import { makeStyles } from "@material-ui/core";
 import { Button } from "@material-ui/core";
 import homeStyleSheet from "./homeStyles.js";
 import art from "../../Icons/art.jpg";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const useStyles = makeStyles(homeStyleSheet);
 
@@ -18,9 +13,7 @@ function Home() {
   return (
     <div className={classes.home}>
       <section className={classes.header}>
-        <h3 className={classes.title}>
-          Imagication
-        </h3>
+        <h3 className={classes.title}>Imagication</h3>
       </section>
       <section className={classes.art}>
         <div className={classes.img}>
@@ -28,31 +21,37 @@ function Home() {
             className={classes.background}
             src={art}
             alt={"background"}
-          >
-          </img>
+          ></img>
         </div>
       </section>
+      {/* <section> */}
       <section className={classes.mission}>
         <section className={classes.missionBody}>
           <h1 className={classes.missionTitle}>
-            The Guidance Counselor That <b style={{ color: '#764BF7' }}>Everyone</b> Deserves
-        </h1>
+            The Guidance Counselor That{" "}
+            <b style={{ color: "#764BF7" }}>Everyone</b> Deserves
+          </h1>
           <div className={classes.missionInfo}>
-            Planning for what to do after high school is never easy. Let's figure it out together!
-        </div>
+            Planning for what to do after high school is never easy. Let's
+            figure it out together!
+          </div>
+        </section>
+        <section className={classes.btn}>
+          <div className={classes.btnLocation}>
+            <Button className={classes.btnCTA} component={Link} to="/home">
+              Get Started
+            </Button>
+          </div>
         </section>
       </section>
-      <section className={classes.btn}>
+      {/* <section className={classes.btn}>
         <div className={classes.btnLocation}>
-          <Button
-            className={classes.btnCTA}
-            component={Link}
-            to="/home"
-          >
+          <Button className={classes.btnCTA} component={Link} to="/home">
             Get Started
-        </Button>
+          </Button>
         </div>
-      </section>
+      </section> */}
+      {/* </section> */}
     </div>
   );
 }

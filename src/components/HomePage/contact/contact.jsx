@@ -37,13 +37,12 @@ function Contact() {
   };
 
   return (
-    <div >
-      <img
-        className={classes.Wave}
-        src={Wave}
-        alt={"Wave"}
-      ></img>
-      <section style={{ backgroundColor: '#F6F6F6' }}>
+    <div>
+      <img className={classes.Wave} src={Wave} alt={"Wave"}></img>
+      <section
+        style={{ backgroundColor: "#F6F6F6" }}
+        className={classes.background}
+      >
         <div className={classes.title}>
           <p id="contact">Interested to learn more?</p>
         </div>
@@ -54,7 +53,7 @@ function Contact() {
                 <p className={classes.top}>We would love to hear from you</p>
                 <p className={classes.bottom}>
                   Send us a message and let us know what you think
-              </p>
+                </p>
               </div>
               <form onSubmit={Disappear}>
                 <label for="name"></label>
@@ -88,7 +87,11 @@ function Contact() {
                   onChange={(e) => setComment(e.target.value)}
                   required
                 ></textarea>
-                <input type="submit" className={classes.submit} value="Submit" />
+                <input
+                  type="submit"
+                  className={classes.submit}
+                  value="Submit"
+                />
               </form>
             </div>
           ) : null}
@@ -100,7 +103,6 @@ function Contact() {
           ) : null}
         </div>
       </section>
-
     </div>
   );
 }

@@ -1,28 +1,26 @@
 const contactStyleSheet = {
   "@keyframes myEffect": {
     "0%": {
-      transform: "scale (1)"
+      transform: "scale (1)",
     },
     "100%": {
-      transform: "scale(0.95)"
-    }
+      transform: "scale(0.95)",
+    },
   },
 
   "@keyframes popOut": {
     "0%": {
-      transform: "scale (0)"
+      transform: "scale (0)",
     },
     "50%": {
-      transform: "scale(1.2)"
+      transform: "scale(1.2)",
     },
     "100%": {
-      transform: "scale(1)"
+      transform: "scale(1)",
     },
   },
 
-  background: {
-
-  },
+  // background: { marginTop: "-40px" },
   contactus: {
     borderRadius: "5px",
     backgroundColor: "#E6E8EC",
@@ -31,11 +29,10 @@ const contactStyleSheet = {
     maxWidth: "400px",
     minWidth: "390px",
     margin: "0 auto",
-    height: '430px',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-
+    height: "430px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
 
     "& input, textarea": {
       width: "80%" /* Full width */,
@@ -56,7 +53,6 @@ const contactStyleSheet = {
       outline: "none",
     },
 
-
     "& input[type=submit]": {
       backgroundColor: "#7864fb",
       color: "white",
@@ -67,19 +63,18 @@ const contactStyleSheet = {
       marginLeft: "10%",
       boxShadow: "none",
       width: "80%" /* Full width */,
-      fontWeight: 'bold',
+      fontWeight: "bold",
     },
 
     "& input[type=submit]:hover": {
       backgroundColor: "#695cc7",
       boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
-      animation: '$myEffect 0.3s forwards'
+      animation: "$myEffect 0.3s forwards",
     },
   },
 
   title: {
     "& p": {
-
       fontWeight: "800",
       fontSize: "30px",
       textAlign: "center",
@@ -97,39 +92,39 @@ const contactStyleSheet = {
   tab: {
     margin: "0px 0px 30px 30px ",
   },
-  vector2: {
-    marginTop: "-18%",
-    "& img": {
-      width: "100%",
-      position: 'absolute',
-      zIndex: '-1',
-    },
-  },
+  // vector2: {
+  //   marginTop: "-18%",
+  //   "& img": {
+  //     width: "100%",
+  //     position: "absolute",
+  //     zIndex: "-1",
+  //   },
+  // },
 
   confirm: {
-    height: '325px',
-    width: '350px',
-    backgroundColor: '#F9F9F9',
-    display: 'grid',
-    alignItems: 'center',
-    borderRadius: '5px',
+    height: "325px",
+    width: "350px",
+    backgroundColor: "#F9F9F9",
+    display: "grid",
+    alignItems: "center",
+    borderRadius: "5px",
 
     "& img": {
-      width: '100%',
-      height: '100px',
-      animation: '$popOut 1s forwards',
-      animationDelay: '0.3s',
+      width: "100%",
+      height: "100px",
+      animation: "$popOut 1s forwards",
+      animationDelay: "0.3s",
     },
 
     "& p": {
-      fontWeight: 'bold',
-      textAlign: 'center',
-      marginTop: '-30px',
+      fontWeight: "bold",
+      textAlign: "center",
+      marginTop: "-30px",
     },
   },
   Wave: {
-    position: 'relative',
-    top: '35px',
+    position: "relative",
+    top: "35px",
   },
 };
 export default contactStyleSheet;
