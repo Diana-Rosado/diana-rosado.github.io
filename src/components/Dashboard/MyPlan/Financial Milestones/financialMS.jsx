@@ -20,11 +20,7 @@ function FinancialMS() {
   const components = [
     <div>
       <Questions />
-    </div>,
-    <div>
-      <CollegeList />
-    </div>,
-    <div>3</div>,
+    </div>
   ];
 
   function Disappear() {
