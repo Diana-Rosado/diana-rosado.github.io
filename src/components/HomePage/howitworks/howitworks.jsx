@@ -55,9 +55,9 @@ function HowItWorks() {
         <section className={classes.text1}>
           <h1 className={classes.title}>Free & Accessible</h1>
           <div className={classes.info}>
-            There are over <strong>11 million students</strong> in a public high
+            There are over <strong style={{ color: "#764BF7" }}>11 million students</strong> in a public high
             school in the U.S. Getting a private counselor is too much money
-            which is why we’re making it <strong>free</strong>.
+            which is why we’re making it <strong style={{ color: "#764BF7" }}>free</strong>.
           </div>
         </section>
       </section>

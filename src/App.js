@@ -3,7 +3,7 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Resources from './components/Serena/ResourcePage/Resource.jsx';
 import FormPage from './components/Serena/FormPage/FormPage.jsx';
 import SignIn from './components/SignIn/SignIn.jsx';
-import Dashboard from './components/Dashboard/Dashboard';
+import Dashboard from './components/Dashboard/Dashboard.jsx';
 
 function App() {
   return (

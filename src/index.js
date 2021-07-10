@@ -4,7 +4,6 @@ import "./index.css";
 import App from "./App";
 // import reportWebVitals from "./reportWebVitals";
 // import { UserProvider } from "./components/currentData.jsx";
-import { CollegeProvider } from "../src/components/Dashboard/MyPlan/Financial Milestones/CollegeContext.jsx";
 import { Auth0Provider } from "@auth0/auth0-react";
 
 const domain = process.env.REACT_APP_AUTH0_DOMAIN;
@@ -16,13 +15,12 @@ ReactDOM.render(
     clientId={clientId}
     redirectUri={window.location.origin + "/home"}
   >
-    <CollegeProvider>
-      {/* <UserProvider> */}
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-      {/* </UserProvider> */}
-    </CollegeProvider>
+
+    {/* <UserProvider> */}
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+    {/* </UserProvider> */}
   </Auth0Provider>,
 
   document.getElementById("root")

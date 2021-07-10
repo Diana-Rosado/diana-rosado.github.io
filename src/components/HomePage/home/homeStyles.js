@@ -43,84 +43,12 @@ const homeStyleSheet = {
     marginBottom: "50px",
   },
 
-  missionTitle: {
-    fontSize: "40px",
-  },
+
 
   missionInfo: {
-    fontSize: "18px",
     color: "#4E4E4E",
     marginTop: "-10px",
-    width: "80%",
     fontWeight: "600",
-  },
-  email: {
-    gridColumnStart: "1",
-    gridColumnEnd: "2",
-    gridRowStart: "3",
-    gridRowEnd: "end",
-  },
-
-  form: {
-    marginLeft: "50px",
-  },
-
-  // formInput: {
-  //   height: "20px",
-  //   width: "50%",
-  //   padding: "12px" /* Some padding */,
-  //   borderTopLeftRadius: "4px" /* Rounded borders */,
-  //   borderBottomLeftRadius: "4px",
-  //   border: "2px #ccc",
-  //   margin: "6px 1px 16px 30px",
-  //   fontFamily: "Sans-Serif",
-  //   boxShadow: "1px 0px 12px 0px rgba(0,0,0,0.2)",
-  //   outline: "none",
-  // },
-
-  // submit: {
-  //   height: "45px",
-  //   width: "100px",
-  //   backgroundColor: "#764BF7",
-  //   color: "white",
-  //   border: "none",
-  //   outline: "none",
-
-  //   "&:hover": {
-  //     textDecoration: "underline",
-  //     cursor: "pointer",
-  //     animation: "$shrink 0.3s forwards",
-  //   },
-  // },
-
-  art: {
-    gridColumnStart: "2",
-    gridColumnEnd: "end",
-    gridRowStart: "1",
-    gridRowEnd: "end",
-    overflow: "hidden",
-  },
-  "@media (max-width: 720px)": {
-    art: {
-      display: "none",
-    },
-    mission: {
-      width: "175%",
-    },
-  },
-
-  img: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-
-  background: {
-    width: "40vw",
-    position: "relative",
-    height: "90vh",
-    borderRadius: "10px",
-    top: "30px",
   },
 
   btnLocation: {
@@ -140,6 +68,156 @@ const homeStyleSheet = {
       boxShadow: "3px 6px 5px -6px #000000",
     },
   },
+
+  // X-large screens
+  '@media (min-width: 1200px)': {
+    missionTitle: {
+      fontSize: "40px",
+    },
+
+    missionInfo: {
+      fontSize: "18px",
+      width: "80%",
+    },
+  },
+
+  //large screens
+  '@media (min-width: 1025px) and (max-width: 1199px)': {
+    missionTitle: {
+      fontSize: "36px",
+    },
+
+    missionInfo: {
+      fontSize: "17px",
+      width: "80%",
+    },
+    btnCTA: {
+      width: "150px",
+      height: "45px",
+      fontSize: "17px",
+    },
+  },
+
+  // smalll screens
+  '@media (min-width: 769px) and (max-width: 1024px)': {
+    missionTitle: {
+      fontSize: "30px",
+    },
+
+    missionInfo: {
+      fontSize: "14px",
+      width: "80%",
+    },
+
+    btnCTA: {
+      width: "125px",
+      height: "35px",
+      fontSize: "14px",
+    },
+    btnLocation: {
+      marginLeft: "75px",
+      position: 'relative',
+      bottom: '50px',
+    },
+    missionBody: {
+      marginLeft: "75px",
+      position: 'relative',
+      bottom: '50px',
+    },
+  },
+  //tablet
+  '@media  (min-width: 650px) and (max-width: 768px)': {
+    missionTitle: {
+      fontSize: "26px",
+      width: '90%',
+
+    },
+
+    missionInfo: {
+      fontSize: "14px",
+      width: "90%",
+
+    },
+
+    btnCTA: {
+      width: "125px",
+      height: "35px",
+      fontSize: "12px",
+    },
+    art: {
+      display: "none",
+    },
+    home: {
+      display: "grid",
+      gridTemplateColumns: "90vw",
+      gridTemplateRows: "10vh 40vh 35vh",
+    },
+    mission: {
+      position: 'relative',
+      bottom: '75px',
+    },
+
+  },
+  '@media (max-width: 649px)': {
+    missionTitle: {
+      fontSize: "22px",
+      width: '90%',
+
+    },
+
+    missionInfo: {
+      fontSize: "12px",
+      width: "90%",
+
+    },
+
+    btnCTA: {
+      width: "100px",
+      height: "30px",
+      fontSize: "10px",
+    },
+    art: {
+      display: "none",
+    },
+    home: {
+      display: "grid",
+      gridTemplateColumns: "90vw",
+      gridTemplateRows: "10vh 40vh 35vh",
+    },
+    mission: {
+      position: 'relative',
+      bottom: '75px',
+    },
+
+  },
+
+  art: {
+    gridColumnStart: "2",
+    gridColumnEnd: "end",
+    gridRowStart: "1",
+    gridRowEnd: "end",
+    overflow: "hidden",
+    width: '95%',
+  },
+
+
+  img: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+
+  },
+
+  background: {
+    width: "40vw",
+    position: "relative",
+    height: "90vh",
+    borderRadius: "10px",
+    top: "30px",
+
+  },
+
+
 };
 
 export default homeStyleSheet;

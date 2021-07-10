@@ -1,12 +1,13 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core";
+import { IconButton, Tooltip, Button, makeStyles } from "@material-ui/core";
 import DashboardStyles from "./DashboardStyles.js";
-import { Button } from "@material-ui/core";
-import user from "../Icons/user.png";
-import Financial from "./MyPlan/Financial Milestones/financialMS.jsx";
 import Home from "../Dashboard/Home/homeDashboard.jsx";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
+import HomeIcon from '@material-ui/icons/HomeOutlined';
+import logo from '../Icons/bird.svg';
+import Map from '@material-ui/icons/MapOutlined';
+import Test from './MyPlan/Blank.jsx';
 
 const useStyles = makeStyles(DashboardStyles);
 function Dashboard() {
@@ -18,62 +19,64 @@ function Dashboard() {
   const routes = [
     {
       path: "/home",
+      // sidebar: () => <HomeIcon />,
       main: () => <Home />,
     },
     {
       path: "/myplan",
-      main: () => <Financial />,
+      // sidebar: () => <Map />,
+      main: () => <Test />,
     },
   ];
 
   return (
     <div className={classes.home}>
-      <section className={classes.header}>
-        <div className={classes.user}>
-          {/* <div className={classes.user}> */}
-          <img src={user} alt={"user"} className={classes.userImg} />
-          {/* </div> */}
-          <h6 className={classes.username}>Sara</h6>
-        </div>
-      </section>
-
-      <section className={classes.sidebar}>
-        <div className={classes.logo}>
-          <Button className={classes.logoBtn} component={Link} to="/" exact>
-            Imagication
-          </Button>
-        </div>
-        <Router>
-          <nav className={classes.nav}>
-            <Button className={classes.navBtn} component={Link} to="/home">
-              Home
-            </Button>
-            <Button className={classes.navBtn} component={Link} to="/myplan">
-              My Plan
-            </Button>
-            <Button
-              className={classes.navBtn}
-              component={Link}
-              to="/myportfolio"
-            >
-              My Portfolio
-            </Button>
-            <Switch>
-              {routes.map((route, index) => (
-                <Route
-                  key={index}
-                  path={route.path}
-                  children={<route.main />}
-                />
-              ))}
-            </Switch>
-          </nav>
-          <div className={classes.logOut}>
-            {/* <Button onClick={() => loginWithRedirect()}>Log In</Button> */}
-            {/* <Button onClick={() => logout()}>Log Out</Button> */}
+      <div className={classes.container}>
+        <section className={classes.header}>
+          <div>
+            search bar
           </div>
-        </Router>
-      </section>
+          <div>
+            user
+          </div>
+        </section>
+
+        <section className={classes.sidebar}>
+          <div className={classes.logo}>
+            <img src={logo} alt="Imagication" className={classes.logoBtn} />
+
+          </div>
+          <Router>
+            <div style={{ display: 'flex' }}>
+              <nav className={classes.nav}>
+                <IconButton className={classes.navBtn} component={Link} to="/home" style={{ color: "rgb(255,255,255)" }} >
+                  <Tooltip title="Home" className={classes.toolTip}>
+                    <HomeIcon />
+                  </Tooltip>
+                </IconButton>
+
+                <IconButton className={classes.navBtn} component={Link} to="/myplan" style={{ color: "rgb(255,255,255)" }}>
+                  <Tooltip className={classes.toolTip} title="My Plan" >
+                    <Map />
+                  </Tooltip>
+                </IconButton>
+
+              </nav>
+              <div style={{ flex: 1 }}>
+                <Switch>
+                  {routes.map((route, index) => (
+                    <Route
+                      key={index}
+                      path={route.path}
+                      children={<route.main />}
+                    />
+                  ))}
+                </Switch>
+              </div>
+            </div>
+          </Router>
+        </section>
+      </div>
     </div>
   );
 }

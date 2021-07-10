@@ -1,79 +1,51 @@
+import zIndex from "@material-ui/core/styles/zIndex";
+
 const DashboardStyles = {
-  header: {
-    gridColumnStart: "3",
-    gridColumnEnd: "end",
-    gridRowStart: "1",
-    gridRowEnd: "2",
-  },
+    container: {
+        display: 'flex',
 
-  user: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-
-  userImg: {},
-  username: {
-    fontSize: "16px",
-  },
-
-  logo: {
-    gridArea: "logo",
-    height: "10vh",
-  },
-  logoBtn: {
-    fontWeight: "bold",
-    position: "relative",
-    top: "2.5vh",
-    fontSize: "16px",
-    textTransform: "capitalize",
-  },
-
-  nav: {
-    gridArea: "sidebar",
-    height: "80vh",
-    display: "flex",
-    flexWrap: "wrap",
-    flexFlow: "column wrap",
-  },
-
-  navBtn: {
-    fontFamily: "sans-Serif",
-    color: "#AAA5A9",
-    padding: "20px",
-    textTransform: "capitalize",
-    fontSize: "15px",
-    width: "20vw",
-
-    "&:hover": {
-      fontWeight: "bold",
-      color: "black",
     },
-  },
-  logOut: {
-    gridArea: "footer",
-  },
 
-  home: {
-    display: "grid",
-    gridTemplateColumns: "20vw 65vw 15vw",
-    gridTemplateRows: "10vh 80vh 10vh",
-    gridTemplateAreas: `
-        "logo header user"
-        "sidebar banner ."
-        "footer resources . "
-      `,
-  },
+    header: {
+        width: '100vw',
+        zIndex: '3',
+        backgroundColor: 'yellow',
+        height: '18vh',
+        textAlign: 'end'
+    },
+    logo: {
+        gridArea: "logo",
+        height: "15vh",
 
-  sidebar: {
-    backgroundColor: "#F7F7F7",
-    height: "100vh",
-    boxShadow: "14px 0px 27px -14px rgba(131,131,131,0.63)",
-    textAlign: "center",
-    position: "fixed",
-    width: "20vw",
-    minWidth: "110px !important",
-  },
+    },
+    logoBtn: {
+        width: '40px',
+        marginTop: '25px',
+    },
+
+    nav: {
+        height: "40vh",
+        display: "flex",
+        flexDirection: 'column',
+        marginTop: '100px',
+    },
+    navBtn: {
+        marginBottom: '30px',
+    },
+    toolTip: {
+        width: '50px',
+    },
+
+    sidebar: {
+        backgroundColor: "black",
+        zIndex: '1',
+        height: "100vh",
+        boxShadow: "14px 0px 27px -14px rgba(131,131,131,0.63)",
+        textAlign: "center",
+        position: "fixed",
+        width: "6vw",
+        // minWidth: "110px !important",
+    },
 };
 
 export default DashboardStyles;
